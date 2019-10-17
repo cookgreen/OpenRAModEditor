@@ -1,0 +1,187 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{2AFC8ADF-771B-492C-8773-977E78CFB051}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>OpenRAModEditor</RootNamespace>
+    <AssemblyName>OpenRAModEditor</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <LangVersion>6</LangVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>development.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.IO.Compression" />
+    <Reference Include="System.IO.Compression.FileSystem" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ctrlModYamlEditor.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ctrlModYamlEditor.Designer.cs">
+      <DependentUpon>ctrlModYamlEditor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ctrlTraitDetails.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ctrlTraitDetails.Designer.cs">
+      <DependentUpon>ctrlTraitDetails.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DownloadManager.cs" />
+    <Compile Include="DownloadTask.cs" />
+    <Compile Include="frmCreateNewMod.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCreateNewMod.Designer.cs">
+      <DependentUpon>frmCreateNewMod.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmControlPanel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmControlPanel.Designer.cs">
+      <DependentUpon>frmControlPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmDownload.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmDownload.Designer.cs">
+      <DependentUpon>frmDownload.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMain.Designer.cs">
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmBasicInfoEditor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmBasicInfoEditor.Designer.cs">
+      <DependentUpon>frmBasicInfoEditor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmOpenMod.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmOpenMod.Designer.cs">
+      <DependentUpon>frmOpenMod.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmTraitBrowser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmTraitBrowser.Designer.cs">
+      <DependentUpon>frmTraitBrowser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ctrlVisualYamlEditor.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ctrlVisualYamlEditor.Designer.cs">
+      <DependentUpon>ctrlVisualYamlEditor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Helper.cs" />
+    <Compile Include="ICloseableForm.cs" />
+    <Compile Include="MiniYaml.cs" />
+    <Compile Include="MiniYamlNode.cs" />
+    <Compile Include="ModConfig.cs" />
+    <Compile Include="ModConfigEditor.cs" />
+    <Compile Include="OraMod.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="ctrlModYamlEditor.resx">
+      <DependentUpon>ctrlModYamlEditor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ctrlTraitDetails.resx">
+      <DependentUpon>ctrlTraitDetails.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ctrlVisualYamlEditor.resx">
+      <DependentUpon>ctrlVisualYamlEditor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCreateNewMod.resx">
+      <DependentUpon>frmCreateNewMod.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmControlPanel.resx">
+      <DependentUpon>frmControlPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmDownload.resx">
+      <DependentUpon>frmDownload.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMain.resx">
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmBasicInfoEditor.resx">
+      <DependentUpon>frmBasicInfoEditor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmOpenMod.resx">
+      <DependentUpon>frmOpenMod.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmTraitBrowser.resx">
+      <DependentUpon>frmTraitBrowser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="development.ico" />
+    <Content Include="images\file.png" />
+    <Content Include="images\file_yaml.png" />
+    <Content Include="images\folder.png" />
+    <Content Include="images\run.png" />
+    <Content Include="images\save.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
