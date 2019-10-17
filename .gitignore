@@ -1,4 +1,7 @@
-obj/*
 *.exe
+*.exe.config
 *.pdb
 *.manifest
+*.config
+.vs/*
+obj/*
