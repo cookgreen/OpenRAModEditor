@@ -66,6 +66,12 @@
     </Compile>
     <Compile Include="DownloadManager.cs" />
     <Compile Include="DownloadTask.cs" />
+    <Compile Include="frmAddEditYamlNode.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAddEditYamlNode.Designer.cs">
+      <DependentUpon>frmAddEditYamlNode.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmCreateNewMod.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -131,6 +137,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ctrlVisualYamlEditor.resx">
       <DependentUpon>ctrlVisualYamlEditor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAddEditYamlNode.resx">
+      <DependentUpon>frmAddEditYamlNode.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmCreateNewMod.resx">
       <DependentUpon>frmCreateNewMod.cs</DependentUpon>

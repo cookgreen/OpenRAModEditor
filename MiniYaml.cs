@@ -95,5 +95,45 @@ namespace OpenRAModEditor
 				}
 			}
 		}
+
+		public void Write()
+		{
+			if(File.Exists(miniYamlFilePath))
+			{
+				File.Delete(miniYamlFilePath);
+			}
+
+			using (StreamWriter writer = new StreamWriter(miniYamlFilePath))
+			{
+				foreach (var node in Nodes)
+				{
+					writer.WriteLine(string.Format("{0}: {1}", node.Name, node.Value));
+					foreach (var subNode in node.ChildNodes)
+					{
+						writer.WriteLine(string.Format("\t{0}: {1}", subNode.Name, subNode.Value));
+						writeSubNode(writer, subNode, 1);
+					}
+				}
+			}
+		}
+		private void writeSubNode(StreamWriter writer, MiniYamlNode node, int lastTabCount)
+		{
+			int count = lastTabCount + 1;
+			foreach (var subNode in node.ChildNodes)
+			{
+				writer.WriteLine(generateStringByCount("\t", count) + string.Format("{0}: {1}", subNode.Name, subNode.Value));
+				writeSubNode(writer, subNode, count + 1);
+			}
+		}
+
+		private string generateStringByCount(string ch, int count)
+		{
+			string str = string.Empty;
+			for (int i = 0; i < count; i++)
+			{
+				str += ch;
+			}
+			return str;
+		}
 	}
 }

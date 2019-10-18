@@ -36,6 +36,7 @@
 			this.splitContainer1 = new System.Windows.Forms.SplitContainer();
 			this.groupBox1 = new System.Windows.Forms.GroupBox();
 			this.modFileList = new System.Windows.Forms.TreeView();
+			this.images = new System.Windows.Forms.ImageList(this.components);
 			this.menu = new System.Windows.Forms.MenuStrip();
 			this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.mnuExit = new System.Windows.Forms.ToolStripMenuItem();
@@ -46,13 +47,17 @@
 			this.mnuOpenRAWiki = new System.Windows.Forms.ToolStripMenuItem();
 			this.mnuOpenRATraitWiki = new System.Windows.Forms.ToolStripMenuItem();
 			this.mnuAbout = new System.Windows.Forms.ToolStripMenuItem();
-			this.images = new System.Windows.Forms.ImageList(this.components);
+			this.ctxMenu = new System.Windows.Forms.ContextMenuStrip(this.components);
+			this.importExistFileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+			this.mnuImportExistFile = new System.Windows.Forms.ToolStripMenuItem();
+			this.mnuAddNew = new System.Windows.Forms.ToolStripMenuItem();
 			this.toolBar.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
 			this.splitContainer1.Panel1.SuspendLayout();
 			this.splitContainer1.SuspendLayout();
 			this.groupBox1.SuspendLayout();
 			this.menu.SuspendLayout();
+			this.ctxMenu.SuspendLayout();
 			this.SuspendLayout();
 			// 
 			// toolBar
@@ -110,6 +115,7 @@
 			// 
 			// modFileList
 			// 
+			this.modFileList.ContextMenuStrip = this.ctxMenu;
 			this.modFileList.Dock = System.Windows.Forms.DockStyle.Fill;
 			this.modFileList.Font = new System.Drawing.Font("宋体", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
 			this.modFileList.ImageIndex = 0;
@@ -121,6 +127,14 @@
 			this.modFileList.TabIndex = 0;
 			this.modFileList.AfterExpand += new System.Windows.Forms.TreeViewEventHandler(this.ModFileList_AfterExpand);
 			this.modFileList.AfterSelect += new System.Windows.Forms.TreeViewEventHandler(this.ModFileList_AfterSelect);
+			// 
+			// images
+			// 
+			this.images.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("images.ImageStream")));
+			this.images.TransparentColor = System.Drawing.Color.Transparent;
+			this.images.Images.SetKeyName(0, "folder.png");
+			this.images.Images.SetKeyName(1, "file.png");
+			this.images.Images.SetKeyName(2, "file_yaml.png");
 			// 
 			// menu
 			// 
@@ -145,7 +159,7 @@
 			// mnuExit
 			// 
 			this.mnuExit.Name = "mnuExit";
-			this.mnuExit.Size = new System.Drawing.Size(96, 22);
+			this.mnuExit.Size = new System.Drawing.Size(180, 22);
 			this.mnuExit.Text = "Exit";
 			this.mnuExit.Click += new System.EventHandler(this.MnuExit_Click);
 			// 
@@ -203,13 +217,33 @@
 			this.mnuAbout.Text = "About";
 			this.mnuAbout.Click += new System.EventHandler(this.MnuAbout_Click);
 			// 
-			// images
+			// ctxMenu
 			// 
-			this.images.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("images.ImageStream")));
-			this.images.TransparentColor = System.Drawing.Color.Transparent;
-			this.images.Images.SetKeyName(0, "folder.png");
-			this.images.Images.SetKeyName(1, "file.png");
-			this.images.Images.SetKeyName(2, "file_yaml.png");
+			this.ctxMenu.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.importExistFileToolStripMenuItem});
+			this.ctxMenu.Name = "ctxMenu";
+			this.ctxMenu.Size = new System.Drawing.Size(101, 26);
+			// 
+			// importExistFileToolStripMenuItem
+			// 
+			this.importExistFileToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.mnuImportExistFile,
+            this.mnuAddNew});
+			this.importExistFileToolStripMenuItem.Name = "importExistFileToolStripMenuItem";
+			this.importExistFileToolStripMenuItem.Size = new System.Drawing.Size(100, 22);
+			this.importExistFileToolStripMenuItem.Text = "Add";
+			// 
+			// mnuImportExistFile
+			// 
+			this.mnuImportExistFile.Name = "mnuImportExistFile";
+			this.mnuImportExistFile.Size = new System.Drawing.Size(180, 22);
+			this.mnuImportExistFile.Text = "Import exist file";
+			// 
+			// mnuAddNew
+			// 
+			this.mnuAddNew.Name = "mnuAddNew";
+			this.mnuAddNew.Size = new System.Drawing.Size(180, 22);
+			this.mnuAddNew.Text = "Add New";
 			// 
 			// frmMain
 			// 
@@ -234,6 +268,7 @@
 			this.groupBox1.ResumeLayout(false);
 			this.menu.ResumeLayout(false);
 			this.menu.PerformLayout();
+			this.ctxMenu.ResumeLayout(false);
 			this.ResumeLayout(false);
 			this.PerformLayout();
 
@@ -258,5 +293,9 @@
 		private System.Windows.Forms.ToolStripButton btnSave;
 		private System.Windows.Forms.GroupBox groupBox1;
 		private System.Windows.Forms.ImageList images;
+		private System.Windows.Forms.ContextMenuStrip ctxMenu;
+		private System.Windows.Forms.ToolStripMenuItem importExistFileToolStripMenuItem;
+		private System.Windows.Forms.ToolStripMenuItem mnuImportExistFile;
+		private System.Windows.Forms.ToolStripMenuItem mnuAddNew;
 	}
 }

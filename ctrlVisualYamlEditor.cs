@@ -45,7 +45,54 @@ namespace OpenRAModEditor
 
 		private void YamlNodeList_AfterSelect(object sender, TreeViewEventArgs e)
 		{
-			txtValue.Text = keyValuePairs[e.Node].Value;
+			if (e.Node != null)
+			{
+				txtValue.Enabled = true;
+				btnAddYamlNode.Enabled = true;
+				btnEditYamlNode.Enabled = true;
+				btnDeleteYamlNode.Enabled = true;
+				btnMoveForward.Enabled = true;
+				btnMoveBackward.Enabled = true;
+				btnSaveChangeToFile.Enabled = true;
+				txtValue.Text = keyValuePairs[e.Node].Value;
+			}
+			else
+			{
+				txtValue.Enabled = false;
+				btnAddYamlNode.Enabled = false;
+				btnEditYamlNode.Enabled = false;
+				btnDeleteYamlNode.Enabled = false;
+				btnMoveForward.Enabled = false;
+				btnMoveBackward.Enabled = false;
+				btnSaveChangeToFile.Enabled = false;
+			}
+		}
+
+		private void BtnAddYamlNode_Click(object sender, EventArgs e)
+		{
+			MiniYamlNode node = keyValuePairs[yamlNodeList.SelectedNode];
+			frmAddEditYamlNode addYamlNodeWin = new frmAddEditYamlNode(node, 0);
+			if (addYamlNodeWin.ShowDialog() == DialogResult.OK)
+			{
+				addYamlNodeWin.Node.ParentNode = node;
+				node.ChildNodes.Add(addYamlNodeWin.Node);
+			}
+		}
+
+		private void BtnSaveChangeToFile_Click(object sender, EventArgs e)
+		{
+			miniYaml.Write();
+			MessageBox.Show("Save Compeleted!", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+		}
+
+		private void BtnEditYamlNode_Click(object sender, EventArgs e)
+		{
+			MiniYamlNode node = keyValuePairs[yamlNodeList.SelectedNode];
+			frmAddEditYamlNode editYamlNodeWin = new frmAddEditYamlNode(keyValuePairs[yamlNodeList.SelectedNode], 1);
+			if (editYamlNodeWin.ShowDialog() == DialogResult.OK)
+			{
+				node = editYamlNodeWin.Node;
+			}
 		}
 	}
 }

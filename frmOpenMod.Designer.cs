@@ -93,6 +93,7 @@
 			// 
 			// btnOpen
 			// 
+			this.btnOpen.Enabled = false;
 			this.btnOpen.Location = new System.Drawing.Point(218, 87);
 			this.btnOpen.Name = "btnOpen";
 			this.btnOpen.Size = new System.Drawing.Size(75, 23);

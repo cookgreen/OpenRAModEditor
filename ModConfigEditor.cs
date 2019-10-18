@@ -38,7 +38,7 @@ namespace OpenRAModEditor
 					{
 						string[] tokens = line.Split('=');
 
-						modConfig.AppendItemValue(tokens[0], tokens[1]);
+						modConfig.AppendItemValue(tokens[0], tokens[1].Replace("\"", null));
 					}
 				}
 			}
