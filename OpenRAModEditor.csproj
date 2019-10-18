@@ -108,6 +108,12 @@
     <Compile Include="frmOpenMod.Designer.cs">
       <DependentUpon>frmOpenMod.cs</DependentUpon>
     </Compile>
+    <Compile Include="ctrlOutputMessage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ctrlOutputMessage.Designer.cs">
+      <DependentUpon>ctrlOutputMessage.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmTraitBrowser.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -127,10 +133,17 @@
     <Compile Include="ModConfig.cs" />
     <Compile Include="ModConfigEditor.cs" />
     <Compile Include="OraMod.cs" />
+    <Compile Include="OraModManifest.cs" />
+    <Compile Include="Outputer.cs" />
+    <Compile Include="OutputerCompile.cs" />
+    <Compile Include="OutputManager.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="ctrlModYamlEditor.resx">
       <DependentUpon>ctrlModYamlEditor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ctrlOutputMessage.resx">
+      <DependentUpon>ctrlOutputMessage.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ctrlTraitDetails.resx">
       <DependentUpon>ctrlTraitDetails.cs</DependentUpon>

@@ -17,6 +17,7 @@ namespace OpenRAModEditor
 		public string ModName { get; set; }
 		public string Author { get; set; }
 		public ModConfig modConfig { get; set; }
+		public OraModManifest Manifest { get; set; }
 
 		public string ModSDKPath
 		{
@@ -37,6 +38,7 @@ namespace OpenRAModEditor
 		public OraMod(string path)
 		{
 			this.path = path;
+			Manifest = new OraModManifest();
 		}
 
 		public void Create()
@@ -49,6 +51,11 @@ namespace OpenRAModEditor
 		{
 			modsdkPath = path;
 			modPath = Path.Combine(modsdkPath, "mods\\" + ModID);
+		}
+
+		public void Run()
+		{
+
 		}
 	}
 }

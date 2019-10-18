@@ -77,6 +77,7 @@
 			this.ShowIcon = false;
 			this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
 			this.Text = "OpenRA Mod Editor";
+			this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.FrmControlPanel_FormClosed);
 			this.ResumeLayout(false);
 
 		}

@@ -36,7 +36,13 @@
 			this.splitContainer1 = new System.Windows.Forms.SplitContainer();
 			this.groupBox1 = new System.Windows.Forms.GroupBox();
 			this.modFileList = new System.Windows.Forms.TreeView();
+			this.ctxMenu = new System.Windows.Forms.ContextMenuStrip(this.components);
+			this.importExistFileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+			this.mnuImportExistFile = new System.Windows.Forms.ToolStripMenuItem();
+			this.mnuAddNew = new System.Windows.Forms.ToolStripMenuItem();
 			this.images = new System.Windows.Forms.ImageList(this.components);
+			this.splitContainer2 = new System.Windows.Forms.SplitContainer();
+			this.ctrlOutputMessage1 = new OpenRAModEditor.ctrlOutputMessage();
 			this.menu = new System.Windows.Forms.MenuStrip();
 			this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.mnuExit = new System.Windows.Forms.ToolStripMenuItem();
@@ -47,17 +53,19 @@
 			this.mnuOpenRAWiki = new System.Windows.Forms.ToolStripMenuItem();
 			this.mnuOpenRATraitWiki = new System.Windows.Forms.ToolStripMenuItem();
 			this.mnuAbout = new System.Windows.Forms.ToolStripMenuItem();
-			this.ctxMenu = new System.Windows.Forms.ContextMenuStrip(this.components);
-			this.importExistFileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-			this.mnuImportExistFile = new System.Windows.Forms.ToolStripMenuItem();
-			this.mnuAddNew = new System.Windows.Forms.ToolStripMenuItem();
+			this.gbMain = new System.Windows.Forms.GroupBox();
 			this.toolBar.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
 			this.splitContainer1.Panel1.SuspendLayout();
+			this.splitContainer1.Panel2.SuspendLayout();
 			this.splitContainer1.SuspendLayout();
 			this.groupBox1.SuspendLayout();
-			this.menu.SuspendLayout();
 			this.ctxMenu.SuspendLayout();
+			((System.ComponentModel.ISupportInitialize)(this.splitContainer2)).BeginInit();
+			this.splitContainer2.Panel1.SuspendLayout();
+			this.splitContainer2.Panel2.SuspendLayout();
+			this.splitContainer2.SuspendLayout();
+			this.menu.SuspendLayout();
 			this.SuspendLayout();
 			// 
 			// toolBar
@@ -88,6 +96,7 @@
 			this.btnRunMod.Name = "btnRunMod";
 			this.btnRunMod.Size = new System.Drawing.Size(23, 22);
 			this.btnRunMod.Text = "Run Mod";
+			this.btnRunMod.Click += new System.EventHandler(this.BtnRunMod_Click);
 			// 
 			// splitContainer1
 			// 
@@ -98,6 +107,10 @@
 			// splitContainer1.Panel1
 			// 
 			this.splitContainer1.Panel1.Controls.Add(this.groupBox1);
+			// 
+			// splitContainer1.Panel2
+			// 
+			this.splitContainer1.Panel2.Controls.Add(this.splitContainer2);
 			this.splitContainer1.Size = new System.Drawing.Size(978, 552);
 			this.splitContainer1.SplitterDistance = 170;
 			this.splitContainer1.TabIndex = 1;
@@ -128,6 +141,34 @@
 			this.modFileList.AfterExpand += new System.Windows.Forms.TreeViewEventHandler(this.ModFileList_AfterExpand);
 			this.modFileList.AfterSelect += new System.Windows.Forms.TreeViewEventHandler(this.ModFileList_AfterSelect);
 			// 
+			// ctxMenu
+			// 
+			this.ctxMenu.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.importExistFileToolStripMenuItem});
+			this.ctxMenu.Name = "ctxMenu";
+			this.ctxMenu.Size = new System.Drawing.Size(101, 26);
+			// 
+			// importExistFileToolStripMenuItem
+			// 
+			this.importExistFileToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.mnuImportExistFile,
+            this.mnuAddNew});
+			this.importExistFileToolStripMenuItem.Name = "importExistFileToolStripMenuItem";
+			this.importExistFileToolStripMenuItem.Size = new System.Drawing.Size(100, 22);
+			this.importExistFileToolStripMenuItem.Text = "Add";
+			// 
+			// mnuImportExistFile
+			// 
+			this.mnuImportExistFile.Name = "mnuImportExistFile";
+			this.mnuImportExistFile.Size = new System.Drawing.Size(167, 22);
+			this.mnuImportExistFile.Text = "Import exist file";
+			// 
+			// mnuAddNew
+			// 
+			this.mnuAddNew.Name = "mnuAddNew";
+			this.mnuAddNew.Size = new System.Drawing.Size(167, 22);
+			this.mnuAddNew.Text = "Add New";
+			// 
 			// images
 			// 
 			this.images.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("images.ImageStream")));
@@ -135,6 +176,32 @@
 			this.images.Images.SetKeyName(0, "folder.png");
 			this.images.Images.SetKeyName(1, "file.png");
 			this.images.Images.SetKeyName(2, "file_yaml.png");
+			// 
+			// splitContainer2
+			// 
+			this.splitContainer2.Dock = System.Windows.Forms.DockStyle.Fill;
+			this.splitContainer2.Location = new System.Drawing.Point(0, 0);
+			this.splitContainer2.Name = "splitContainer2";
+			this.splitContainer2.Orientation = System.Windows.Forms.Orientation.Horizontal;
+			// 
+			// splitContainer2.Panel1
+			// 
+			this.splitContainer2.Panel1.Controls.Add(this.gbMain);
+			// 
+			// splitContainer2.Panel2
+			// 
+			this.splitContainer2.Panel2.Controls.Add(this.ctrlOutputMessage1);
+			this.splitContainer2.Size = new System.Drawing.Size(804, 552);
+			this.splitContainer2.SplitterDistance = 420;
+			this.splitContainer2.TabIndex = 0;
+			// 
+			// ctrlOutputMessage1
+			// 
+			this.ctrlOutputMessage1.Dock = System.Windows.Forms.DockStyle.Fill;
+			this.ctrlOutputMessage1.Location = new System.Drawing.Point(0, 0);
+			this.ctrlOutputMessage1.Name = "ctrlOutputMessage1";
+			this.ctrlOutputMessage1.Size = new System.Drawing.Size(804, 128);
+			this.ctrlOutputMessage1.TabIndex = 0;
 			// 
 			// menu
 			// 
@@ -159,7 +226,7 @@
 			// mnuExit
 			// 
 			this.mnuExit.Name = "mnuExit";
-			this.mnuExit.Size = new System.Drawing.Size(180, 22);
+			this.mnuExit.Size = new System.Drawing.Size(96, 22);
 			this.mnuExit.Text = "Exit";
 			this.mnuExit.Click += new System.EventHandler(this.MnuExit_Click);
 			// 
@@ -217,33 +284,14 @@
 			this.mnuAbout.Text = "About";
 			this.mnuAbout.Click += new System.EventHandler(this.MnuAbout_Click);
 			// 
-			// ctxMenu
+			// gbMain
 			// 
-			this.ctxMenu.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.importExistFileToolStripMenuItem});
-			this.ctxMenu.Name = "ctxMenu";
-			this.ctxMenu.Size = new System.Drawing.Size(101, 26);
-			// 
-			// importExistFileToolStripMenuItem
-			// 
-			this.importExistFileToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.mnuImportExistFile,
-            this.mnuAddNew});
-			this.importExistFileToolStripMenuItem.Name = "importExistFileToolStripMenuItem";
-			this.importExistFileToolStripMenuItem.Size = new System.Drawing.Size(100, 22);
-			this.importExistFileToolStripMenuItem.Text = "Add";
-			// 
-			// mnuImportExistFile
-			// 
-			this.mnuImportExistFile.Name = "mnuImportExistFile";
-			this.mnuImportExistFile.Size = new System.Drawing.Size(180, 22);
-			this.mnuImportExistFile.Text = "Import exist file";
-			// 
-			// mnuAddNew
-			// 
-			this.mnuAddNew.Name = "mnuAddNew";
-			this.mnuAddNew.Size = new System.Drawing.Size(180, 22);
-			this.mnuAddNew.Text = "Add New";
+			this.gbMain.Dock = System.Windows.Forms.DockStyle.Fill;
+			this.gbMain.Location = new System.Drawing.Point(0, 0);
+			this.gbMain.Name = "gbMain";
+			this.gbMain.Size = new System.Drawing.Size(804, 420);
+			this.gbMain.TabIndex = 0;
+			this.gbMain.TabStop = false;
 			// 
 			// frmMain
 			// 
@@ -263,12 +311,17 @@
 			this.toolBar.ResumeLayout(false);
 			this.toolBar.PerformLayout();
 			this.splitContainer1.Panel1.ResumeLayout(false);
+			this.splitContainer1.Panel2.ResumeLayout(false);
 			((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
 			this.splitContainer1.ResumeLayout(false);
 			this.groupBox1.ResumeLayout(false);
+			this.ctxMenu.ResumeLayout(false);
+			this.splitContainer2.Panel1.ResumeLayout(false);
+			this.splitContainer2.Panel2.ResumeLayout(false);
+			((System.ComponentModel.ISupportInitialize)(this.splitContainer2)).EndInit();
+			this.splitContainer2.ResumeLayout(false);
 			this.menu.ResumeLayout(false);
 			this.menu.PerformLayout();
-			this.ctxMenu.ResumeLayout(false);
 			this.ResumeLayout(false);
 			this.PerformLayout();
 
@@ -297,5 +350,8 @@
 		private System.Windows.Forms.ToolStripMenuItem importExistFileToolStripMenuItem;
 		private System.Windows.Forms.ToolStripMenuItem mnuImportExistFile;
 		private System.Windows.Forms.ToolStripMenuItem mnuAddNew;
+		private System.Windows.Forms.SplitContainer splitContainer2;
+		private ctrlOutputMessage ctrlOutputMessage1;
+		private System.Windows.Forms.GroupBox gbMain;
 	}
 }

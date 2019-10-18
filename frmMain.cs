@@ -16,6 +16,13 @@ namespace OpenRAModEditor
 		private OraMod mod;
 		private Dictionary<TreeNode, string> nodePathDic;
 		private Dictionary<string, MiniYaml> miniYamls;
+		public GroupBox MainPanel
+		{
+			get
+			{
+				return gbMain;
+			}
+		}
 
 		public frmMain(OraMod mod)
 		{
@@ -119,8 +126,8 @@ namespace OpenRAModEditor
 				{
 					MiniYaml yaml = miniYamls[fullPath];
 					ctrlVisualYamlEditor yamlEditor = new ctrlVisualYamlEditor(yaml);
-					splitContainer1.Panel2.Controls.Clear();
-					splitContainer1.Panel2.Controls.Add(yamlEditor);
+					MainPanel.Controls.Clear();
+					MainPanel.Controls.Add(yamlEditor);
 					yamlEditor.Dock = DockStyle.Fill;
 				}
 			}
@@ -154,7 +161,12 @@ namespace OpenRAModEditor
 
 		private void MnuRunMod_Click(object sender, EventArgs e)
 		{
+			mod.Run();
+		}
 
+		private void BtnRunMod_Click(object sender, EventArgs e)
+		{
+			mod.Run();
 		}
 	}
 }

@@ -42,5 +42,11 @@ namespace OpenRAModEditor
 			openModWin.CloseForm += CloseForm;
 			openModWin.ShowDialog();
 		}
+
+		private void FrmControlPanel_FormClosed(object sender, FormClosedEventArgs e)
+		{
+			Application.Exit();
+			DownloadManager.Instance.Stop();
+		}
 	}
 }
