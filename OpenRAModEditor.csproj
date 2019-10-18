@@ -58,6 +58,12 @@
     <Compile Include="ctrlModYamlEditor.Designer.cs">
       <DependentUpon>ctrlModYamlEditor.cs</DependentUpon>
     </Compile>
+    <Compile Include="ctrlSettingExternalApplication.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ctrlSettingExternalApplication.Designer.cs">
+      <DependentUpon>ctrlSettingExternalApplication.cs</DependentUpon>
+    </Compile>
     <Compile Include="ctrlTraitDetails.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -114,6 +120,18 @@
     <Compile Include="ctrlOutputMessage.Designer.cs">
       <DependentUpon>ctrlOutputMessage.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmSettingExternalApplicationAddEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSettingExternalApplicationAddEdit.Designer.cs">
+      <DependentUpon>frmSettingExternalApplicationAddEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmSettings.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSettings.Designer.cs">
+      <DependentUpon>frmSettings.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmTraitBrowser.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -128,11 +146,13 @@
     </Compile>
     <Compile Include="Helper.cs" />
     <Compile Include="ICloseableForm.cs" />
+    <Compile Include="ISavableControl.cs" />
     <Compile Include="MiniYaml.cs" />
     <Compile Include="MiniYamlNode.cs" />
     <Compile Include="ModConfig.cs" />
     <Compile Include="ModConfigEditor.cs" />
     <Compile Include="OraMod.cs" />
+    <Compile Include="OraModEditorProject.cs" />
     <Compile Include="OraModManifest.cs" />
     <Compile Include="Outputer.cs" />
     <Compile Include="OutputerCompile.cs" />
@@ -144,6 +164,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ctrlOutputMessage.resx">
       <DependentUpon>ctrlOutputMessage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ctrlSettingExternalApplication.resx">
+      <DependentUpon>ctrlSettingExternalApplication.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ctrlTraitDetails.resx">
       <DependentUpon>ctrlTraitDetails.cs</DependentUpon>
@@ -171,6 +194,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmOpenMod.resx">
       <DependentUpon>frmOpenMod.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSettingExternalApplicationAddEdit.resx">
+      <DependentUpon>frmSettingExternalApplicationAddEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSettings.resx">
+      <DependentUpon>frmSettings.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmTraitBrowser.resx">
       <DependentUpon>frmTraitBrowser.cs</DependentUpon>

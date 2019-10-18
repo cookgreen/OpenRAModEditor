@@ -13,6 +13,7 @@ namespace OpenRAModEditor
 {
 	public partial class frmMain : Form
 	{
+		private OraModEditorProject project;
 		private OraMod mod;
 		private Dictionary<TreeNode, string> nodePathDic;
 		private Dictionary<string, MiniYaml> miniYamls;
@@ -24,10 +25,11 @@ namespace OpenRAModEditor
 			}
 		}
 
-		public frmMain(OraMod mod)
+		public frmMain(OraModEditorProject project)
 		{
 			InitializeComponent();
-			this.mod = mod;
+			this.project = project;
+			this.mod = project.Mod;
 			nodePathDic = new Dictionary<TreeNode, string>();
 			miniYamls = new Dictionary<string, MiniYaml>();
 
@@ -70,6 +72,7 @@ namespace OpenRAModEditor
 		private void FrmMain_FormClosed(object sender, FormClosedEventArgs e)
 		{
 			DownloadManager.Instance.Stop();
+			project.Save(project.Mod.ModSDKPath + "\\.project");
 			Application.Exit();
 		}
 
@@ -167,6 +170,12 @@ namespace OpenRAModEditor
 		private void BtnRunMod_Click(object sender, EventArgs e)
 		{
 			mod.Run();
+		}
+
+		private void MnuSettings_Click(object sender, EventArgs e)
+		{
+			frmSettings settingsWin = new frmSettings(project);
+			settingsWin.ShowDialog();
 		}
 	}
 }

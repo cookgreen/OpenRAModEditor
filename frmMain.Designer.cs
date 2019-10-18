@@ -42,7 +42,6 @@
 			this.mnuAddNew = new System.Windows.Forms.ToolStripMenuItem();
 			this.images = new System.Windows.Forms.ImageList(this.components);
 			this.splitContainer2 = new System.Windows.Forms.SplitContainer();
-			this.ctrlOutputMessage1 = new OpenRAModEditor.ctrlOutputMessage();
 			this.menu = new System.Windows.Forms.MenuStrip();
 			this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.mnuExit = new System.Windows.Forms.ToolStripMenuItem();
@@ -54,6 +53,9 @@
 			this.mnuOpenRATraitWiki = new System.Windows.Forms.ToolStripMenuItem();
 			this.mnuAbout = new System.Windows.Forms.ToolStripMenuItem();
 			this.gbMain = new System.Windows.Forms.GroupBox();
+			this.ctrlOutputMessage1 = new OpenRAModEditor.ctrlOutputMessage();
+			this.toolsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+			this.mnuSettings = new System.Windows.Forms.ToolStripMenuItem();
 			this.toolBar.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
 			this.splitContainer1.Panel1.SuspendLayout();
@@ -195,19 +197,12 @@
 			this.splitContainer2.SplitterDistance = 420;
 			this.splitContainer2.TabIndex = 0;
 			// 
-			// ctrlOutputMessage1
-			// 
-			this.ctrlOutputMessage1.Dock = System.Windows.Forms.DockStyle.Fill;
-			this.ctrlOutputMessage1.Location = new System.Drawing.Point(0, 0);
-			this.ctrlOutputMessage1.Name = "ctrlOutputMessage1";
-			this.ctrlOutputMessage1.Size = new System.Drawing.Size(804, 128);
-			this.ctrlOutputMessage1.TabIndex = 0;
-			// 
 			// menu
 			// 
 			this.menu.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.fileToolStripMenuItem,
             this.modToolStripMenuItem,
+            this.toolsToolStripMenuItem,
             this.helpToolStripMenuItem});
 			this.menu.Location = new System.Drawing.Point(0, 0);
 			this.menu.Name = "menu";
@@ -293,6 +288,29 @@
 			this.gbMain.TabIndex = 0;
 			this.gbMain.TabStop = false;
 			// 
+			// ctrlOutputMessage1
+			// 
+			this.ctrlOutputMessage1.Dock = System.Windows.Forms.DockStyle.Fill;
+			this.ctrlOutputMessage1.Location = new System.Drawing.Point(0, 0);
+			this.ctrlOutputMessage1.Name = "ctrlOutputMessage1";
+			this.ctrlOutputMessage1.Size = new System.Drawing.Size(804, 128);
+			this.ctrlOutputMessage1.TabIndex = 0;
+			// 
+			// toolsToolStripMenuItem
+			// 
+			this.toolsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.mnuSettings});
+			this.toolsToolStripMenuItem.Name = "toolsToolStripMenuItem";
+			this.toolsToolStripMenuItem.Size = new System.Drawing.Size(52, 21);
+			this.toolsToolStripMenuItem.Text = "Tools";
+			// 
+			// mnuSettings
+			// 
+			this.mnuSettings.Name = "mnuSettings";
+			this.mnuSettings.Size = new System.Drawing.Size(180, 22);
+			this.mnuSettings.Text = "Settings";
+			this.mnuSettings.Click += new System.EventHandler(this.MnuSettings_Click);
+			// 
 			// frmMain
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
@@ -353,5 +371,7 @@
 		private System.Windows.Forms.SplitContainer splitContainer2;
 		private ctrlOutputMessage ctrlOutputMessage1;
 		private System.Windows.Forms.GroupBox gbMain;
+		private System.Windows.Forms.ToolStripMenuItem toolsToolStripMenuItem;
+		private System.Windows.Forms.ToolStripMenuItem mnuSettings;
 	}
 }

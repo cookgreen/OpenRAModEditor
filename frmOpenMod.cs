@@ -36,10 +36,10 @@ namespace OpenRAModEditor
 			mod.Version = config["ENGINE_VERSION"];
 			mod.Author = config["PACKAGING_AUTHORS"];
 			mod.modConfig = config;
-			mod.Open();
+			var project = mod.Open();
 
-			frmMain mainWin = new frmMain(mod);
-			mainWin.ShowDialog();
+			frmMain mainWin = new frmMain(project);
+			mainWin.Show();
 		}
 
 		private void BtnBrowse_Click(object sender, EventArgs e)
@@ -78,8 +78,19 @@ namespace OpenRAModEditor
 					string modID = config["MOD_ID"];
 					string modPath = path + "\\mods\\" + modID;
 					string modYamlPath = modPath + "\\mod.yaml";
+					string modEditorProjectPath = path + "\\.project";
 					if (Directory.Exists(modPath) && File.Exists(modYamlPath))
 					{
+						if (!File.Exists(modEditorProjectPath))
+						{
+							OraModEditorProject editorProject = new OraModEditorProject();
+							editorProject.BasicInfo.ModID = modID;
+							editorProject.BasicInfo.Name = config["PACKAGING_WINDOWS_LAUNCHER_NAME"];
+							editorProject.BasicInfo.EngineVersion = config["ENGINE_VERSION"];
+							editorProject.BasicInfo.Author = config["PACKAGING_AUTHORS"];
+							editorProject.Save(modEditorProjectPath);
+						}
+
 						return true;
 					}
 					else

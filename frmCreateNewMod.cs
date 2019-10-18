@@ -130,7 +130,7 @@ namespace OpenRAModEditor
 
 			//Modify the Solution content to match the project
 
-			frmMain mainWindow = new frmMain(mod);
+			frmMain mainWindow = new frmMain(mod.Project);
 			mainWindow.Show();
 		}
 

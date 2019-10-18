@@ -18,6 +18,7 @@ namespace OpenRAModEditor
 		public string Author { get; set; }
 		public ModConfig modConfig { get; set; }
 		public OraModManifest Manifest { get; set; }
+		public OraModEditorProject Project { get; set; }
 
 		public string ModSDKPath
 		{
@@ -45,12 +46,24 @@ namespace OpenRAModEditor
 		{
 			modsdkPath = Path.Combine(path, ModName);
 			modPath = Path.Combine(modsdkPath, "mods\\" + ModID);
+			OraModEditorProject project = new OraModEditorProject();
+			project.BasicInfo.ModID = ModID;
+			project.BasicInfo.Name = ModName;
+			project.BasicInfo.Author = Author;
+			project.BasicInfo.EngineVersion = Version;
+			project.Mod = this;
+			project.Save(modsdkPath + "\\.project");
+			Project = project;
 		}
 
-		public void Open()
+		public OraModEditorProject Open()
 		{
 			modsdkPath = path;
 			modPath = Path.Combine(modsdkPath, "mods\\" + ModID);
+			OraModEditorProject project = OraModEditorProject.Load(modsdkPath + "\\.project");
+			project.Mod = this;
+			Project = project;
+			return project;
 		}
 
 		public void Run()
