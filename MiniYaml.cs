@@ -28,7 +28,7 @@ namespace OpenRAModEditor
 				while (reader.Peek() > -1)
 				{
 					string line = reader.ReadLine();
-					if (string.IsNullOrEmpty(line) || line.StartsWith("#"))
+					if (string.IsNullOrWhiteSpace(line) || line.StartsWith("#"))
 					{
 						continue;
 					}

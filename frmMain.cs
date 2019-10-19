@@ -86,12 +86,12 @@ namespace OpenRAModEditor
 					"Warning", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
 				{
 					runtime.Stop();
-					DownloadManager.Instance.Stop();
-					project.Save(project.Mod.ModSDKPath + "\\.project");
-					Application.Exit();
 				}
-			}
-		}
+            }
+            DownloadManager.Instance.Stop();
+            project.Save(project.Mod.ModSDKPath + "\\.project");
+            Application.Exit();
+        }
 
 		private void ModFileList_AfterExpand(object sender, TreeViewEventArgs e)
 		{
