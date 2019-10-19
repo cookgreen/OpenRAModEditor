@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace OpenRAModEditor
 {
-	public partial class ctrlVisualYamlEditor : UserControl
+	public partial class ctrlVisualYamlEditor : UserControl, IReceiveRunStateChanged
 	{
 		private MiniYaml miniYaml;
 		private Dictionary<TreeNode, MiniYamlNode> keyValuePairs;
@@ -92,6 +92,37 @@ namespace OpenRAModEditor
 			if (editYamlNodeWin.ShowDialog() == DialogResult.OK)
 			{
 				node = editYamlNodeWin.Node;
+			}
+		}
+
+		public void RunStateChanged(RuntimeState state)
+		{
+			switch(state)
+			{
+				case RuntimeState.Compiling:
+					yamlNodeList.Enabled = false;
+					btnAddYamlNode.Enabled = false;
+					btnDeleteYamlNode.Enabled = false;
+					btnEditYamlNode.Enabled = false;
+					btnMoveBackward.Enabled = false;
+					btnMoveForward.Enabled = false;
+					break;
+				case RuntimeState.Running:
+					yamlNodeList.Enabled = false;
+					btnAddYamlNode.Enabled = false;
+					btnDeleteYamlNode.Enabled = false;
+					btnEditYamlNode.Enabled = false;
+					btnMoveBackward.Enabled = false;
+					btnMoveForward.Enabled = false;
+					break;
+				case RuntimeState.Stop:
+					yamlNodeList.Enabled = true;
+					btnAddYamlNode.Enabled = true;
+					btnDeleteYamlNode.Enabled = true;
+					btnEditYamlNode.Enabled = true;
+					btnMoveBackward.Enabled = true;
+					btnMoveForward.Enabled = true;
+					break;
 			}
 		}
 	}

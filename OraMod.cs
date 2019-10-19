@@ -65,10 +65,5 @@ namespace OpenRAModEditor
 			Project = project;
 			return project;
 		}
-
-		public void Run()
-		{
-
-		}
 	}
 }

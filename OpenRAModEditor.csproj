@@ -146,6 +146,7 @@
     </Compile>
     <Compile Include="Helper.cs" />
     <Compile Include="ICloseableForm.cs" />
+    <Compile Include="INotifyRunStateChanged.cs" />
     <Compile Include="ISavableControl.cs" />
     <Compile Include="MiniYaml.cs" />
     <Compile Include="MiniYamlNode.cs" />
@@ -154,6 +155,7 @@
     <Compile Include="OraMod.cs" />
     <Compile Include="OraModEditorProject.cs" />
     <Compile Include="OraModManifest.cs" />
+    <Compile Include="OraModRuntime.cs" />
     <Compile Include="Outputer.cs" />
     <Compile Include="OutputerCompile.cs" />
     <Compile Include="OutputManager.cs" />

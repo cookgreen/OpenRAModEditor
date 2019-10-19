@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace OpenRAModEditor
 {
-	public partial class ctrlOutputMessage : UserControl
+	public partial class ctrlOutputMessage : UserControl, IReceiveRunStateChanged
 	{
 		private int lastCount = 0;
 		private Timer timer;
@@ -36,7 +36,7 @@ namespace OpenRAModEditor
 					var message = OutputManager.Instance.GetCurrentMessageByName(cmbOutputSourceType.SelectedItem.ToString());
 					if (!string.IsNullOrEmpty(message))
 					{
-						txtMessages.AppendText(message);
+						txtMessages.AppendText(message + Environment.NewLine);
 					}
 				}
 				lastCount = count;
@@ -57,10 +57,23 @@ namespace OpenRAModEditor
 			{
 				if (!string.IsNullOrEmpty(message))
 				{
-					txtMessages.AppendText(message);
+					txtMessages.AppendText(message + Environment.NewLine);
 				}
 			}
 			lastCount = messages.Count;
+		}
+
+		public void RunStateChanged(RuntimeState state)
+		{
+			switch(state)
+			{
+				case RuntimeState.Compiling:
+					cmbOutputSourceType.SelectedIndex = 0;
+					break;
+				case RuntimeState.Running:
+					cmbOutputSourceType.SelectedIndex = 1;
+					break;
+			}
 		}
 	}
 }

@@ -13,10 +13,12 @@ namespace OpenRAModEditor
 {
 	public partial class frmMain : Form
 	{
-		private OraModEditorProject project;
 		private OraMod mod;
+		private OraModEditorProject project;
 		private Dictionary<TreeNode, string> nodePathDic;
 		private Dictionary<string, MiniYaml> miniYamls;
+		private Timer timer;
+		private OraModRuntime runtime;
 		public GroupBox MainPanel
 		{
 			get
@@ -32,9 +34,16 @@ namespace OpenRAModEditor
 			this.mod = project.Mod;
 			nodePathDic = new Dictionary<TreeNode, string>();
 			miniYamls = new Dictionary<string, MiniYaml>();
+			timer = new Timer();
+			timer.Interval = 100;
+			timer.Tick += Timer_Tick;
+			timer.Start();
+			runtime = new OraModRuntime(mod);
+			runtime.RunStateChanged += Runtime_RunStateChanged;
 
 			InitializeMod();
 		}
+
 		private void InitializeMod()
 		{
 			modFileList.Nodes.Clear();
@@ -71,9 +80,17 @@ namespace OpenRAModEditor
 
 		private void FrmMain_FormClosed(object sender, FormClosedEventArgs e)
 		{
-			DownloadManager.Instance.Stop();
-			project.Save(project.Mod.ModSDKPath + "\\.project");
-			Application.Exit();
+			if(runtime.StillRunning)
+			{
+				if (MessageBox.Show("There is still running process, do you want to force stop all running processes?",
+					"Warning", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+				{
+					runtime.Stop();
+					DownloadManager.Instance.Stop();
+					project.Save(project.Mod.ModSDKPath + "\\.project");
+					Application.Exit();
+				}
+			}
 		}
 
 		private void ModFileList_AfterExpand(object sender, TreeViewEventArgs e)
@@ -164,18 +181,49 @@ namespace OpenRAModEditor
 
 		private void MnuRunMod_Click(object sender, EventArgs e)
 		{
-			mod.Run();
+			string reason;
+			if(runtime.CompileAsync(out reason))
+			{
+
+			}
 		}
 
 		private void BtnRunMod_Click(object sender, EventArgs e)
 		{
-			mod.Run();
+			string reason;
+			if (runtime.CompileAsync(out reason))
+			{
+
+			}
 		}
 
 		private void MnuSettings_Click(object sender, EventArgs e)
 		{
 			frmSettings settingsWin = new frmSettings(project);
 			settingsWin.ShowDialog();
+		}
+
+		private void Timer_Tick(object sender, EventArgs e)
+		{
+		}
+
+		private void Runtime_RunStateChanged(RuntimeState newState)
+		{
+			switch(newState)
+			{
+				case RuntimeState.Compiling:
+					mnuRunMod.Enabled = false;
+					btnRunMod.Enabled = false;
+					break;
+				case RuntimeState.Running:
+					mnuRunMod.Enabled = false;
+					btnRunMod.Enabled = false;
+					break;
+				case RuntimeState.Stop:
+					mnuRunMod.Enabled = true;
+					btnRunMod.Enabled = true;
+					break;
+			}
 		}
 	}
 }
