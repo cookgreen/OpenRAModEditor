@@ -21,7 +21,8 @@ namespace OpenRAModEditor
 			timer.Tick += Timer_Tick;
 			timer.Start();
 			OutputManager.Instance.RegisterOutput(new OutputerCompile());
-			cmbOutputSourceType.SelectedIndex = 0;
+            OutputManager.Instance.RegisterOutput(new OutputerRun());
+            cmbOutputSourceType.SelectedIndex = 0;
 		}
 
 		private void Timer_Tick(object sender, EventArgs e)

@@ -113,7 +113,24 @@ namespace OpenRAModEditor
 
 		private void RunWorker_DoWork(object sender, DoWorkEventArgs e)
 		{
-			
+            Process oraExe = new Process();
+            oraExe.StartInfo = new ProcessStartInfo();
+            oraExe.StartInfo.FileName = mod.ModSDKPath + "\\engine\\" + "OpenRA.Game.exe";
+            oraExe.StartInfo.RedirectStandardError = true;
+            oraExe.StartInfo.RedirectStandardOutput = true;
+            oraExe.StartInfo.RedirectStandardInput = true;
+            oraExe.StartInfo.UseShellExecute = false;
+            oraExe.StartInfo.Arguments = "Game.Mod=" + mod.ModPath + " Engine.ModSearchPaths=" + mod.ModSDKPath + "\\mods";
+            oraExe.Start();
+            while (oraExe.HasExited)
+            {
+                string line = oraExe.StandardOutput.ReadLine();
+                if (!string.IsNullOrEmpty(line))
+                {
+                    OutputManager.Instance.AddMessageToOutputer(line, "Run");
+                }
+            }
+            oraExe.WaitForExit();
 		}
 
 		private void RunWorker_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
@@ -156,7 +173,6 @@ namespace OpenRAModEditor
 
 		private void compileEngine(string engineFullPath)
 		{
-
 			Process makeProcess = new Process();
 			makeProcess.StartInfo = new ProcessStartInfo();
 			makeProcess.StartInfo.RedirectStandardError = true;
@@ -204,7 +220,8 @@ namespace OpenRAModEditor
 			compileModProcess.StartInfo.RedirectStandardOutput = true;
 			compileModProcess.StartInfo.RedirectStandardInput = true;
 			compileModProcess.StartInfo.UseShellExecute = false;
-			compileModProcess.StartInfo.FileName = "powershell.exe";
+            compileModProcess.StartInfo.UseShellExecute = false;
+            compileModProcess.StartInfo.FileName = "powershell.exe";
 			List<string> commands = new List<string>()
 			{
 				"cd " + modSDKPath,

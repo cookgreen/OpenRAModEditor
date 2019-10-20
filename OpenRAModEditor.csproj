@@ -158,6 +158,7 @@
     <Compile Include="OraModRuntime.cs" />
     <Compile Include="Outputer.cs" />
     <Compile Include="OutputerCompile.cs" />
+    <Compile Include="OutputerRun.cs" />
     <Compile Include="OutputManager.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

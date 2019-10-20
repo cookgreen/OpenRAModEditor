@@ -48,6 +48,7 @@ namespace OpenRAModEditor
 			}
 			else
 			{
+                DialogResult = DialogResult.OK;
 				Close();
 
 				string modFullPath = txtPath.Text + "\\" + txtModName.Text;
@@ -142,5 +143,14 @@ namespace OpenRAModEditor
 				txtPath.Text = dialog.SelectedPath;
 			}
 		}
-	}
+
+        private void FrmCreateNewMod_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Close();
+            if (DialogResult != DialogResult.OK)
+            {
+                CloseForm?.Invoke(this);
+            }
+        }
+    }
 }

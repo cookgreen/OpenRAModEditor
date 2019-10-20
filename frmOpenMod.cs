@@ -28,6 +28,7 @@ namespace OpenRAModEditor
 
 		private void BtnOpen_Click(object sender, EventArgs e)
 		{
+            DialogResult = DialogResult.OK;
 			Close();
 
 			OraMod mod = new OraMod(txtModPath.Text);
@@ -104,5 +105,14 @@ namespace OpenRAModEditor
 				}
 			}
 		}
-	}
+
+        private void FrmOpenMod_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Close();
+            if (DialogResult != DialogResult.OK)
+            {
+                CloseForm?.Invoke(this);
+            }
+        }
+    }
 }
