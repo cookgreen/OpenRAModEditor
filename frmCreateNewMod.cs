@@ -9,18 +9,62 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Newtonsoft.Json;
 
 namespace OpenRAModEditor
 {
 	public partial class frmCreateNewMod : Form, ICloseableForm
 	{
 		private OraMod mod;
+		private GithubAPI api;
+		private List<GithubTag> tags;
+		private frmLoading loadingWin;
+		public event Action<object> CloseForm;
 		public frmCreateNewMod()
 		{
 			InitializeComponent();
+			api = new GithubAPI();
+			api.GetResult += Api_GetResult;
+			loadingWin = new frmLoading();
 		}
 
-		public event Action<object> CloseForm;
+		private void FrmCreateNewMod_Load(object sender, EventArgs e)
+		{
+			api.GetTagsAsync("OpenRA", "OpenRAModSDK");
+			loadingWin.BringToFront();
+			loadingWin.ShowDialog();
+		}
+
+		private void Api_GetResult(string errType, string type, string responseText)
+		{
+			loadingWin.Close();
+			switch (errType)
+			{
+				case "finished":
+					switch (type)
+					{
+						case "get_all_tags":
+							tags = JsonConvert.DeserializeObject<List<GithubTag>>(responseText);
+							var sortedTags = from t in tags
+											 orderby t.Tag descending
+											 select t;
+							cmbVersionList.Items.Clear();
+							foreach(var tag in sortedTags)
+							{
+								cmbVersionList.Items.Add(tag.Tag);
+							}
+							if(cmbVersionList.Items.Count>0)
+							{
+								cmbVersionList.SelectedIndex = 0;
+							}
+							break;
+					}
+					break;
+				case "error":
+					MessageBox.Show(responseText, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+					break;
+			}
+		}
 
 		private void BtnCancel_Click(object sender, EventArgs e)
 		{
@@ -152,5 +196,5 @@ namespace OpenRAModEditor
                 CloseForm?.Invoke(this);
             }
         }
-    }
+	}
 }

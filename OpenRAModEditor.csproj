@@ -36,6 +36,9 @@
     <ApplicationIcon>development.ico</ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>packages\Newtonsoft.Json.12.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.IO.Compression" />
@@ -96,6 +99,12 @@
     <Compile Include="frmDownload.Designer.cs">
       <DependentUpon>frmDownload.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmLoading.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmLoading.Designer.cs">
+      <DependentUpon>frmLoading.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmMain.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -144,6 +153,7 @@
     <Compile Include="ctrlVisualYamlEditor.Designer.cs">
       <DependentUpon>ctrlVisualYamlEditor.cs</DependentUpon>
     </Compile>
+    <Compile Include="GithubAPI.cs" />
     <Compile Include="Helper.cs" />
     <Compile Include="ICloseableForm.cs" />
     <Compile Include="INotifyRunStateChanged.cs" />
@@ -189,6 +199,9 @@
     <EmbeddedResource Include="frmDownload.resx">
       <DependentUpon>frmDownload.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmLoading.resx">
+      <DependentUpon>frmLoading.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmMain.resx">
       <DependentUpon>frmMain.cs</DependentUpon>
     </EmbeddedResource>
@@ -216,6 +229,7 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

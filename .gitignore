@@ -1,7 +1,8 @@
 *.exe
+*.dll
 *.exe.config
+packages/*
 *.pdb
 *.manifest
-*.config
 .vs/*
 obj/*
