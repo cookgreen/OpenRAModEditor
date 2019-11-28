@@ -81,7 +81,7 @@ namespace OpenRAModEditor
 
 		private void BtnSaveChangeToFile_Click(object sender, EventArgs e)
 		{
-			miniYaml.Write();
+			miniYaml.Save();
 			MessageBox.Show("Save Compeleted!", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
 		}
 

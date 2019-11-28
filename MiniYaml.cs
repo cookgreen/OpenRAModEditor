@@ -96,7 +96,7 @@ namespace OpenRAModEditor
 			}
 		}
 
-		public void Write()
+		public void Save()
 		{
 			if(File.Exists(miniYamlFilePath))
 			{

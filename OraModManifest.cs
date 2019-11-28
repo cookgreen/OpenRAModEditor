@@ -12,7 +12,7 @@ namespace OpenRAModEditor
 		private Dictionary<string, string> prefixes;
 		private string modPath;
 		public string ID { get; set; }
-		public List<string> Packages { get; set; }
+		public Dictionary<string, string> Packages { get; set; }
 		public Dictionary<string, string> Resources { get; set; }
 		public Dictionary<string, string> Rules { get; set; }
 		public Dictionary<string, string> Sequences { get; set; }
@@ -30,7 +30,7 @@ namespace OpenRAModEditor
 			Sequences = new Dictionary<string, string>();
 			Chrome = new Dictionary<string, string>();
 			Resources = new Dictionary<string, string>();
-			Packages = new List<string>();
+			Packages = new Dictionary<string, string>();
 
 			MiniYaml miniYaml = new MiniYaml(Path.Combine(modPath, "mod.yaml"));
 			foreach(var node in miniYaml.Nodes)
@@ -58,7 +58,7 @@ namespace OpenRAModEditor
 								if (prefixes.ContainsKey(tokens[0]))
 								{
 									string packagePath = Path.Combine(prefixes[tokens[0]], tokens[1]);
-									Packages.Add(packagePath);
+									Packages.Add(tokens[1], packagePath);
 									DirectoryInfo di = new DirectoryInfo(packagePath);
 									if (di.Exists)
 									{
