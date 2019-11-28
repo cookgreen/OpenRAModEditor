@@ -55,6 +55,12 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ctrlChromeEditor.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ctrlChromeEditor.Designer.cs">
+      <DependentUpon>ctrlChromeEditor.cs</DependentUpon>
+    </Compile>
     <Compile Include="ctrlModYamlEditor.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -172,6 +178,9 @@
     <Compile Include="OutputManager.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="ctrlChromeEditor.resx">
+      <DependentUpon>ctrlChromeEditor.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ctrlModYamlEditor.resx">
       <DependentUpon>ctrlModYamlEditor.cs</DependentUpon>
     </EmbeddedResource>

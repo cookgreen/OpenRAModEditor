@@ -142,13 +142,25 @@ namespace OpenRAModEditor
 			if (e.Node != null && nodePathDic.ContainsKey(e.Node))
 			{
 				string fullPath = nodePathDic[e.Node];
-				if (!string.IsNullOrEmpty(Path.GetExtension(fullPath)) && Path.GetExtension(fullPath) == ".yaml")
+				if (!string.IsNullOrEmpty(Path.GetExtension(fullPath)) && 
+					Path.GetExtension(fullPath) == ".yaml")
 				{
-					MiniYaml yaml = miniYamls[fullPath];
-					ctrlVisualYamlEditor yamlEditor = new ctrlVisualYamlEditor(yaml);
-					MainPanel.Controls.Clear();
-					MainPanel.Controls.Add(yamlEditor);
-					yamlEditor.Dock = DockStyle.Fill;
+					if (mod.Manifest.Chrome.ContainsKey(e.Node.Text) &&
+						mod.Manifest.Chrome[e.Node.Text] == fullPath)
+					{
+						ctrlChromeEditor ctrlChromeEditor = new ctrlChromeEditor(mod, e.Node.Text);
+						MainPanel.Controls.Clear();
+						MainPanel.Controls.Add(ctrlChromeEditor);
+						ctrlChromeEditor.Dock = DockStyle.Fill;
+					}
+					else
+					{
+						MiniYaml yaml = miniYamls[fullPath];
+						ctrlVisualYamlEditor yamlEditor = new ctrlVisualYamlEditor(yaml);
+						MainPanel.Controls.Clear();
+						MainPanel.Controls.Add(yamlEditor);
+						yamlEditor.Dock = DockStyle.Fill;
+					}
 				}
 			}
 		}

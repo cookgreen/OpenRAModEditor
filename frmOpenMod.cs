@@ -39,6 +39,8 @@ namespace OpenRAModEditor
 			mod.modConfig = config;
 			var project = mod.Open();
 
+			mod.Init();
+
 			frmMain mainWin = new frmMain(project);
 			mainWin.Show();
 		}

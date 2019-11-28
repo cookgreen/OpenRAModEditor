@@ -39,7 +39,6 @@ namespace OpenRAModEditor
 		public OraMod(string path)
 		{
 			this.path = path;
-			Manifest = new OraModManifest();
 		}
 
 		public void Create()
@@ -64,6 +63,11 @@ namespace OpenRAModEditor
 			project.Mod = this;
 			Project = project;
 			return project;
+		}
+
+		public void Init()
+		{
+			Manifest = new OraModManifest(modPath);
 		}
 	}
 }

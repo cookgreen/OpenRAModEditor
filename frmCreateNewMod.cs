@@ -167,6 +167,7 @@ namespace OpenRAModEditor
 			}
 			Directory.Delete(defaultModDirectory, true);
 
+			mod.Init();
 			//Rename the project file name
 
 			//Rename the project directory name
