@@ -24,6 +24,15 @@ namespace OpenRAModEditor
 			this.oraMod = oraMod;
 			this.chromeFile = chromeFile;
 			dic = new Dictionary<TreeNode, MiniYamlNode>();
+
+			InitLanguageOptions();
+		}
+
+		private void InitLanguageOptions()
+		{
+			groupBox1.Text = LanguageManager.Instance.GetLocalizedString("ui_chrome_editor_chromes_list");
+			btnAdd.Text = LanguageManager.Instance.GetLocalizedString("ui_add");
+			btnDelete.Text = LanguageManager.Instance.GetLocalizedString("ui_delete");
 		}
 
 		private void CtrlChromeEditor_Load(object sender, EventArgs e)

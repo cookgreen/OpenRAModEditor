@@ -28,23 +28,23 @@
 		/// </summary>
 		private void InitializeComponent()
 		{
-			this.label1 = new System.Windows.Forms.Label();
+			this.lbChromeName = new System.Windows.Forms.Label();
 			this.txtChromeName = new System.Windows.Forms.TextBox();
-			this.label2 = new System.Windows.Forms.Label();
+			this.lbChromeResource = new System.Windows.Forms.Label();
 			this.txtResourcePath = new System.Windows.Forms.TextBox();
 			this.btnChoose = new System.Windows.Forms.Button();
 			this.btnCancel = new System.Windows.Forms.Button();
 			this.btnOK = new System.Windows.Forms.Button();
 			this.SuspendLayout();
 			// 
-			// label1
+			// lbChromeName
 			// 
-			this.label1.AutoSize = true;
-			this.label1.Location = new System.Drawing.Point(13, 13);
-			this.label1.Name = "label1";
-			this.label1.Size = new System.Drawing.Size(35, 12);
-			this.label1.TabIndex = 0;
-			this.label1.Text = "Name:";
+			this.lbChromeName.AutoSize = true;
+			this.lbChromeName.Location = new System.Drawing.Point(13, 13);
+			this.lbChromeName.Name = "lbChromeName";
+			this.lbChromeName.Size = new System.Drawing.Size(35, 12);
+			this.lbChromeName.TabIndex = 0;
+			this.lbChromeName.Text = "Name:";
 			// 
 			// txtChromeName
 			// 
@@ -53,14 +53,14 @@
 			this.txtChromeName.Size = new System.Drawing.Size(218, 21);
 			this.txtChromeName.TabIndex = 1;
 			// 
-			// label2
+			// lbChromeResource
 			// 
-			this.label2.AutoSize = true;
-			this.label2.Location = new System.Drawing.Point(13, 45);
-			this.label2.Name = "label2";
-			this.label2.Size = new System.Drawing.Size(59, 12);
-			this.label2.TabIndex = 2;
-			this.label2.Text = "Resource:";
+			this.lbChromeResource.AutoSize = true;
+			this.lbChromeResource.Location = new System.Drawing.Point(13, 45);
+			this.lbChromeResource.Name = "lbChromeResource";
+			this.lbChromeResource.Size = new System.Drawing.Size(59, 12);
+			this.lbChromeResource.TabIndex = 2;
+			this.lbChromeResource.Text = "Resource:";
 			// 
 			// txtResourcePath
 			// 
@@ -109,9 +109,9 @@
 			this.Controls.Add(this.btnCancel);
 			this.Controls.Add(this.btnChoose);
 			this.Controls.Add(this.txtResourcePath);
-			this.Controls.Add(this.label2);
+			this.Controls.Add(this.lbChromeResource);
 			this.Controls.Add(this.txtChromeName);
-			this.Controls.Add(this.label1);
+			this.Controls.Add(this.lbChromeName);
 			this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
 			this.MaximizeBox = false;
 			this.MinimizeBox = false;
@@ -127,9 +127,9 @@
 
 		#endregion
 
-		private System.Windows.Forms.Label label1;
+		private System.Windows.Forms.Label lbChromeName;
 		private System.Windows.Forms.TextBox txtChromeName;
-		private System.Windows.Forms.Label label2;
+		private System.Windows.Forms.Label lbChromeResource;
 		private System.Windows.Forms.TextBox txtResourcePath;
 		private System.Windows.Forms.Button btnChoose;
 		private System.Windows.Forms.Button btnCancel;

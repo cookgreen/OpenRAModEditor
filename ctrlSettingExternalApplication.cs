@@ -17,6 +17,14 @@ namespace OpenRAModEditor
 		{
 			InitializeComponent();
 			this.project = project;
+
+			InitLanguageOptions();
+		}
+
+		private void InitLanguageOptions()
+		{
+			colExtension.Text = LanguageManager.Instance.GetLocalizedString("ui_setting_external_app_extension");
+			colAppPath.Text = LanguageManager.Instance.GetLocalizedString("ui_setting_external_app_application");
 		}
 
 		private void BtnAdd_Click(object sender, EventArgs e)

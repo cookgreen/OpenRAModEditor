@@ -26,6 +26,20 @@ namespace OpenRAModEditor
 			api = new GithubAPI();
 			api.GetResult += Api_GetResult;
 			loadingWin = new frmLoading();
+
+			InitLanguageOptions();
+		}
+
+		private void InitLanguageOptions()
+		{
+			Text = LanguageManager.Instance.GetLocalizedString("ui_new_mod_title");
+			lbModPath.Text = LanguageManager.Instance.GetLocalizedString("ui_new_mod_path");
+			lbModVersion.Text = LanguageManager.Instance.GetLocalizedString("ui_new_mod_version");
+			lbModID.Text = LanguageManager.Instance.GetLocalizedString("ui_new_mod_mod_id");
+			lbModName.Text = LanguageManager.Instance.GetLocalizedString("ui_new_mod_mod_name");
+			lbModAuthor.Text = LanguageManager.Instance.GetLocalizedString("ui_new_mod_mod_author");
+			btnCreate.Text = LanguageManager.Instance.GetLocalizedString("ui_create");
+			btnCancel.Text = LanguageManager.Instance.GetLocalizedString("ui_cancel");
 		}
 
 		private void FrmCreateNewMod_Load(object sender, EventArgs e)

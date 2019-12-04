@@ -30,11 +30,11 @@
 		{
 			this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
 			this.externalAppList = new System.Windows.Forms.ListView();
-			this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-			this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+			this.colExtension = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+			this.colAppPath = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
 			this.panel1 = new System.Windows.Forms.Panel();
-			this.btnAdd = new System.Windows.Forms.Button();
 			this.btnDelete = new System.Windows.Forms.Button();
+			this.btnAdd = new System.Windows.Forms.Button();
 			this.tableLayoutPanel1.SuspendLayout();
 			this.panel1.SuspendLayout();
 			this.SuspendLayout();
@@ -57,8 +57,8 @@
 			// externalAppList
 			// 
 			this.externalAppList.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.columnHeader1,
-            this.columnHeader2});
+            this.colExtension,
+            this.colAppPath});
 			this.externalAppList.Dock = System.Windows.Forms.DockStyle.Fill;
 			this.externalAppList.FullRowSelect = true;
 			this.externalAppList.GridLines = true;
@@ -70,15 +70,15 @@
 			this.externalAppList.View = System.Windows.Forms.View.Details;
 			this.externalAppList.SelectedIndexChanged += new System.EventHandler(this.ExternalAppList_SelectedIndexChanged);
 			// 
-			// columnHeader1
+			// colExtension
 			// 
-			this.columnHeader1.Text = "Extension";
-			this.columnHeader1.Width = 100;
+			this.colExtension.Text = "Extension";
+			this.colExtension.Width = 100;
 			// 
-			// columnHeader2
+			// colAppPath
 			// 
-			this.columnHeader2.Text = "Application Path";
-			this.columnHeader2.Width = 424;
+			this.colAppPath.Text = "Application Path";
+			this.colAppPath.Width = 424;
 			// 
 			// panel1
 			// 
@@ -90,16 +90,6 @@
 			this.panel1.Size = new System.Drawing.Size(44, 474);
 			this.panel1.TabIndex = 1;
 			// 
-			// btnAdd
-			// 
-			this.btnAdd.Location = new System.Drawing.Point(3, 3);
-			this.btnAdd.Name = "btnAdd";
-			this.btnAdd.Size = new System.Drawing.Size(38, 23);
-			this.btnAdd.TabIndex = 0;
-			this.btnAdd.Text = "+";
-			this.btnAdd.UseVisualStyleBackColor = true;
-			this.btnAdd.Click += new System.EventHandler(this.BtnAdd_Click);
-			// 
 			// btnDelete
 			// 
 			this.btnDelete.Location = new System.Drawing.Point(3, 32);
@@ -109,6 +99,16 @@
 			this.btnDelete.Text = "-";
 			this.btnDelete.UseVisualStyleBackColor = true;
 			this.btnDelete.Click += new System.EventHandler(this.BtnDelete_Click);
+			// 
+			// btnAdd
+			// 
+			this.btnAdd.Location = new System.Drawing.Point(3, 3);
+			this.btnAdd.Name = "btnAdd";
+			this.btnAdd.Size = new System.Drawing.Size(38, 23);
+			this.btnAdd.TabIndex = 0;
+			this.btnAdd.Text = "+";
+			this.btnAdd.UseVisualStyleBackColor = true;
+			this.btnAdd.Click += new System.EventHandler(this.BtnAdd_Click);
 			// 
 			// ctrlSettingExternalApplication
 			// 
@@ -126,8 +126,8 @@
 
 		private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
 		private System.Windows.Forms.ListView externalAppList;
-		private System.Windows.Forms.ColumnHeader columnHeader1;
-		private System.Windows.Forms.ColumnHeader columnHeader2;
+		private System.Windows.Forms.ColumnHeader colExtension;
+		private System.Windows.Forms.ColumnHeader colAppPath;
 		private System.Windows.Forms.Panel panel1;
 		private System.Windows.Forms.Button btnAdd;
 		private System.Windows.Forms.Button btnDelete;

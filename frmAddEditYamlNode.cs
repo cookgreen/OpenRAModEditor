@@ -34,6 +34,16 @@ namespace OpenRAModEditor
 			{
 				Text = "Edit Yaml Node";
 			}
+
+			InitLanguageOptions();
+		}
+
+		private void InitLanguageOptions()
+		{
+			lbNodeName.Text = LanguageManager.Instance.GetLocalizedString("ui_yaml_editor_add_edit_node_node_name");
+			lbNodeValue.Text = LanguageManager.Instance.GetLocalizedString("ui_yaml_editor_add_edit_node_node_value");
+			btnOK.Text = LanguageManager.Instance.GetLocalizedString("ui_ok");
+			btnCancel.Text = LanguageManager.Instance.GetLocalizedString("ui_cancel");
 		}
 
 		private void FrmAddEditYamlNode_Load(object sender, EventArgs e)

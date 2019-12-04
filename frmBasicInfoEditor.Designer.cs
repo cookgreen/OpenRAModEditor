@@ -28,29 +28,29 @@
 		/// </summary>
 		private void InitializeComponent()
 		{
-			this.label1 = new System.Windows.Forms.Label();
+			this.lbModID = new System.Windows.Forms.Label();
 			this.txtModID = new System.Windows.Forms.TextBox();
-			this.label2 = new System.Windows.Forms.Label();
+			this.lbEngineVersion = new System.Windows.Forms.Label();
 			this.txtEngineVersion = new System.Windows.Forms.TextBox();
-			this.label3 = new System.Windows.Forms.Label();
+			this.lbModAssembly = new System.Windows.Forms.Label();
 			this.txtModAssembly = new System.Windows.Forms.TextBox();
-			this.label4 = new System.Windows.Forms.Label();
+			this.lbPackagingInstallerName = new System.Windows.Forms.Label();
 			this.txtPackingInstallerName = new System.Windows.Forms.TextBox();
-			this.label5 = new System.Windows.Forms.Label();
+			this.lbPackagingAuthor = new System.Windows.Forms.Label();
 			this.txtPackagingAuthor = new System.Windows.Forms.TextBox();
 			this.btnCancel = new System.Windows.Forms.Button();
 			this.btnOK = new System.Windows.Forms.Button();
 			this.btnOpenModConfig = new System.Windows.Forms.Button();
 			this.SuspendLayout();
 			// 
-			// label1
+			// lbModID
 			// 
-			this.label1.AutoSize = true;
-			this.label1.Location = new System.Drawing.Point(10, 15);
-			this.label1.Name = "label1";
-			this.label1.Size = new System.Drawing.Size(47, 12);
-			this.label1.TabIndex = 2;
-			this.label1.Text = "Mod ID:";
+			this.lbModID.AutoSize = true;
+			this.lbModID.Location = new System.Drawing.Point(10, 15);
+			this.lbModID.Name = "lbModID";
+			this.lbModID.Size = new System.Drawing.Size(47, 12);
+			this.lbModID.TabIndex = 2;
+			this.lbModID.Text = "Mod ID:";
 			// 
 			// txtModID
 			// 
@@ -59,14 +59,14 @@
 			this.txtModID.Size = new System.Drawing.Size(194, 21);
 			this.txtModID.TabIndex = 3;
 			// 
-			// label2
+			// lbEngineVersion
 			// 
-			this.label2.AutoSize = true;
-			this.label2.Location = new System.Drawing.Point(10, 46);
-			this.label2.Name = "label2";
-			this.label2.Size = new System.Drawing.Size(95, 12);
-			this.label2.TabIndex = 4;
-			this.label2.Text = "Engine Version:";
+			this.lbEngineVersion.AutoSize = true;
+			this.lbEngineVersion.Location = new System.Drawing.Point(10, 46);
+			this.lbEngineVersion.Name = "lbEngineVersion";
+			this.lbEngineVersion.Size = new System.Drawing.Size(95, 12);
+			this.lbEngineVersion.TabIndex = 4;
+			this.lbEngineVersion.Text = "Engine Version:";
 			// 
 			// txtEngineVersion
 			// 
@@ -76,14 +76,14 @@
 			this.txtEngineVersion.Size = new System.Drawing.Size(194, 21);
 			this.txtEngineVersion.TabIndex = 5;
 			// 
-			// label3
+			// lbModAssembly
 			// 
-			this.label3.AutoSize = true;
-			this.label3.Location = new System.Drawing.Point(10, 79);
-			this.label3.Name = "label3";
-			this.label3.Size = new System.Drawing.Size(83, 12);
-			this.label3.TabIndex = 6;
-			this.label3.Text = "Mod Assembly:";
+			this.lbModAssembly.AutoSize = true;
+			this.lbModAssembly.Location = new System.Drawing.Point(10, 79);
+			this.lbModAssembly.Name = "lbModAssembly";
+			this.lbModAssembly.Size = new System.Drawing.Size(83, 12);
+			this.lbModAssembly.TabIndex = 6;
+			this.lbModAssembly.Text = "Mod Assembly:";
 			// 
 			// txtModAssembly
 			// 
@@ -92,14 +92,14 @@
 			this.txtModAssembly.Size = new System.Drawing.Size(194, 21);
 			this.txtModAssembly.TabIndex = 7;
 			// 
-			// label4
+			// lbPackagingInstallerName
 			// 
-			this.label4.AutoSize = true;
-			this.label4.Location = new System.Drawing.Point(10, 116);
-			this.label4.Name = "label4";
-			this.label4.Size = new System.Drawing.Size(155, 12);
-			this.label4.TabIndex = 8;
-			this.label4.Text = "Packaging Installer Name:";
+			this.lbPackagingInstallerName.AutoSize = true;
+			this.lbPackagingInstallerName.Location = new System.Drawing.Point(10, 116);
+			this.lbPackagingInstallerName.Name = "lbPackagingInstallerName";
+			this.lbPackagingInstallerName.Size = new System.Drawing.Size(155, 12);
+			this.lbPackagingInstallerName.TabIndex = 8;
+			this.lbPackagingInstallerName.Text = "Packaging Installer Name:";
 			// 
 			// txtPackingInstallerName
 			// 
@@ -108,14 +108,14 @@
 			this.txtPackingInstallerName.Size = new System.Drawing.Size(134, 21);
 			this.txtPackingInstallerName.TabIndex = 9;
 			// 
-			// label5
+			// lbPackagingAuthor
 			// 
-			this.label5.AutoSize = true;
-			this.label5.Location = new System.Drawing.Point(10, 149);
-			this.label5.Name = "label5";
-			this.label5.Size = new System.Drawing.Size(107, 12);
-			this.label5.TabIndex = 10;
-			this.label5.Text = "Packaging Author:";
+			this.lbPackagingAuthor.AutoSize = true;
+			this.lbPackagingAuthor.Location = new System.Drawing.Point(10, 149);
+			this.lbPackagingAuthor.Name = "lbPackagingAuthor";
+			this.lbPackagingAuthor.Size = new System.Drawing.Size(107, 12);
+			this.lbPackagingAuthor.TabIndex = 10;
+			this.lbPackagingAuthor.Text = "Packaging Author:";
 			// 
 			// txtPackagingAuthor
 			// 
@@ -164,15 +164,15 @@
 			this.Controls.Add(this.btnOK);
 			this.Controls.Add(this.btnCancel);
 			this.Controls.Add(this.txtPackagingAuthor);
-			this.Controls.Add(this.label5);
+			this.Controls.Add(this.lbPackagingAuthor);
 			this.Controls.Add(this.txtPackingInstallerName);
-			this.Controls.Add(this.label4);
+			this.Controls.Add(this.lbPackagingInstallerName);
 			this.Controls.Add(this.txtModAssembly);
-			this.Controls.Add(this.label3);
+			this.Controls.Add(this.lbModAssembly);
 			this.Controls.Add(this.txtEngineVersion);
-			this.Controls.Add(this.label2);
+			this.Controls.Add(this.lbEngineVersion);
 			this.Controls.Add(this.txtModID);
-			this.Controls.Add(this.label1);
+			this.Controls.Add(this.lbModID);
 			this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
 			this.MaximizeBox = false;
 			this.MinimizeBox = false;
@@ -186,15 +186,15 @@
 		}
 
 		#endregion
-		private System.Windows.Forms.Label label1;
+		private System.Windows.Forms.Label lbModID;
 		private System.Windows.Forms.TextBox txtModID;
-		private System.Windows.Forms.Label label2;
+		private System.Windows.Forms.Label lbEngineVersion;
 		private System.Windows.Forms.TextBox txtEngineVersion;
-		private System.Windows.Forms.Label label3;
+		private System.Windows.Forms.Label lbModAssembly;
 		private System.Windows.Forms.TextBox txtModAssembly;
-		private System.Windows.Forms.Label label4;
+		private System.Windows.Forms.Label lbPackagingInstallerName;
 		private System.Windows.Forms.TextBox txtPackingInstallerName;
-		private System.Windows.Forms.Label label5;
+		private System.Windows.Forms.Label lbPackagingAuthor;
 		private System.Windows.Forms.TextBox txtPackagingAuthor;
 		private System.Windows.Forms.Button btnCancel;
 		private System.Windows.Forms.Button btnOK;

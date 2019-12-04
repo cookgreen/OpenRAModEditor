@@ -29,7 +29,7 @@
 		private void InitializeComponent()
 		{
 			this.progressBar2 = new System.Windows.Forms.ProgressBar();
-			this.label2 = new System.Windows.Forms.Label();
+			this.lbTotalProgress = new System.Windows.Forms.Label();
 			this.label3 = new System.Windows.Forms.Label();
 			this.btnCancel = new System.Windows.Forms.Button();
 			this.btnHide = new System.Windows.Forms.Button();
@@ -43,14 +43,14 @@
 			this.progressBar2.Size = new System.Drawing.Size(427, 48);
 			this.progressBar2.TabIndex = 1;
 			// 
-			// label2
+			// lbTotalProgress
 			// 
-			this.label2.AutoSize = true;
-			this.label2.Location = new System.Drawing.Point(12, 20);
-			this.label2.Name = "label2";
-			this.label2.Size = new System.Drawing.Size(95, 12);
-			this.label2.TabIndex = 3;
-			this.label2.Text = "Total Progress:";
+			this.lbTotalProgress.AutoSize = true;
+			this.lbTotalProgress.Location = new System.Drawing.Point(12, 20);
+			this.lbTotalProgress.Name = "lbTotalProgress";
+			this.lbTotalProgress.Size = new System.Drawing.Size(95, 12);
+			this.lbTotalProgress.TabIndex = 3;
+			this.lbTotalProgress.Text = "Total Progress:";
 			// 
 			// label3
 			// 
@@ -99,7 +99,7 @@
 			this.Controls.Add(this.btnHide);
 			this.Controls.Add(this.btnCancel);
 			this.Controls.Add(this.label3);
-			this.Controls.Add(this.label2);
+			this.Controls.Add(this.lbTotalProgress);
 			this.Controls.Add(this.progressBar2);
 			this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
 			this.MaximizeBox = false;
@@ -115,7 +115,7 @@
 
 		#endregion
 		private System.Windows.Forms.ProgressBar progressBar2;
-		private System.Windows.Forms.Label label2;
+		private System.Windows.Forms.Label lbTotalProgress;
 		private System.Windows.Forms.Label label3;
 		private System.Windows.Forms.Button btnCancel;
 		private System.Windows.Forms.Button btnHide;

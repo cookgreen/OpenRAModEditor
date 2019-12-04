@@ -23,6 +23,16 @@ namespace OpenRAModEditor
 			OutputManager.Instance.RegisterOutput(new OutputerCompile());
             OutputManager.Instance.RegisterOutput(new OutputerRun());
             cmbOutputSourceType.SelectedIndex = 0;
+
+			InitLanguageOptions();
+		}
+
+		private void InitLanguageOptions()
+		{
+			groupBox1.Text = LanguageManager.Instance.GetLocalizedString("ui_output_title");
+			lbOutputSource.Text = LanguageManager.Instance.GetLocalizedString("ui_output_source");
+			cmbOutputSourceType.Items[0] = LanguageManager.Instance.GetLocalizedString("ui_output_source_compile");
+			cmbOutputSourceType.Items[1] = LanguageManager.Instance.GetLocalizedString("ui_output_source_run");
 		}
 
 		private void Timer_Tick(object sender, EventArgs e)

@@ -45,14 +45,15 @@
 			this.gbMain = new System.Windows.Forms.GroupBox();
 			this.ctrlOutputMessage1 = new OpenRAModEditor.ctrlOutputMessage();
 			this.menu = new System.Windows.Forms.MenuStrip();
-			this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+			this.mnuFile = new System.Windows.Forms.ToolStripMenuItem();
 			this.mnuExit = new System.Windows.Forms.ToolStripMenuItem();
-			this.modToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-			this.menuBasicInfomation = new System.Windows.Forms.ToolStripMenuItem();
+			this.mnuMod = new System.Windows.Forms.ToolStripMenuItem();
+			this.mnuBasicInformation = new System.Windows.Forms.ToolStripMenuItem();
 			this.mnuRunMod = new System.Windows.Forms.ToolStripMenuItem();
-			this.toolsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+			this.mnuTools = new System.Windows.Forms.ToolStripMenuItem();
 			this.mnuSettings = new System.Windows.Forms.ToolStripMenuItem();
-			this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+			this.mnuLanguages = new System.Windows.Forms.ToolStripMenuItem();
+			this.mnuHelp = new System.Windows.Forms.ToolStripMenuItem();
 			this.mnuOpenRAWiki = new System.Windows.Forms.ToolStripMenuItem();
 			this.mnuOpenRATraitWiki = new System.Windows.Forms.ToolStripMenuItem();
 			this.mnuAbout = new System.Windows.Forms.ToolStripMenuItem();
@@ -217,46 +218,46 @@
 			// menu
 			// 
 			this.menu.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.fileToolStripMenuItem,
-            this.modToolStripMenuItem,
-            this.toolsToolStripMenuItem,
-            this.helpToolStripMenuItem});
+            this.mnuFile,
+            this.mnuMod,
+            this.mnuTools,
+            this.mnuHelp});
 			this.menu.Location = new System.Drawing.Point(0, 0);
 			this.menu.Name = "menu";
 			this.menu.Size = new System.Drawing.Size(978, 25);
 			this.menu.TabIndex = 2;
 			this.menu.Text = "menuStrip1";
 			// 
-			// fileToolStripMenuItem
+			// mnuFile
 			// 
-			this.fileToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+			this.mnuFile.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.mnuExit});
-			this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
-			this.fileToolStripMenuItem.Size = new System.Drawing.Size(39, 21);
-			this.fileToolStripMenuItem.Text = "File";
+			this.mnuFile.Name = "mnuFile";
+			this.mnuFile.Size = new System.Drawing.Size(39, 21);
+			this.mnuFile.Text = "File";
 			// 
 			// mnuExit
 			// 
 			this.mnuExit.Name = "mnuExit";
-			this.mnuExit.Size = new System.Drawing.Size(96, 22);
+			this.mnuExit.Size = new System.Drawing.Size(180, 22);
 			this.mnuExit.Text = "Exit";
 			this.mnuExit.Click += new System.EventHandler(this.MnuExit_Click);
 			// 
-			// modToolStripMenuItem
+			// mnuMod
 			// 
-			this.modToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.menuBasicInfomation,
+			this.mnuMod.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.mnuBasicInformation,
             this.mnuRunMod});
-			this.modToolStripMenuItem.Name = "modToolStripMenuItem";
-			this.modToolStripMenuItem.Size = new System.Drawing.Size(48, 21);
-			this.modToolStripMenuItem.Text = "Mod";
+			this.mnuMod.Name = "mnuMod";
+			this.mnuMod.Size = new System.Drawing.Size(48, 21);
+			this.mnuMod.Text = "Mod";
 			// 
-			// menuBasicInfomation
+			// mnuBasicInformation
 			// 
-			this.menuBasicInfomation.Name = "menuBasicInfomation";
-			this.menuBasicInfomation.Size = new System.Drawing.Size(180, 22);
-			this.menuBasicInfomation.Text = "Basic Infomation";
-			this.menuBasicInfomation.Click += new System.EventHandler(this.MenuBasicInfomation_Click);
+			this.mnuBasicInformation.Name = "mnuBasicInformation";
+			this.mnuBasicInformation.Size = new System.Drawing.Size(180, 22);
+			this.mnuBasicInformation.Text = "Basic Infomation";
+			this.mnuBasicInformation.Click += new System.EventHandler(this.MenuBasicInfomation_Click);
 			// 
 			// mnuRunMod
 			// 
@@ -265,30 +266,37 @@
 			this.mnuRunMod.Text = "Run";
 			this.mnuRunMod.Click += new System.EventHandler(this.MnuRunMod_Click);
 			// 
-			// toolsToolStripMenuItem
+			// mnuTools
 			// 
-			this.toolsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.mnuSettings});
-			this.toolsToolStripMenuItem.Name = "toolsToolStripMenuItem";
-			this.toolsToolStripMenuItem.Size = new System.Drawing.Size(52, 21);
-			this.toolsToolStripMenuItem.Text = "Tools";
+			this.mnuTools.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.mnuSettings,
+            this.mnuLanguages});
+			this.mnuTools.Name = "mnuTools";
+			this.mnuTools.Size = new System.Drawing.Size(52, 21);
+			this.mnuTools.Text = "Tools";
 			// 
 			// mnuSettings
 			// 
 			this.mnuSettings.Name = "mnuSettings";
-			this.mnuSettings.Size = new System.Drawing.Size(122, 22);
+			this.mnuSettings.Size = new System.Drawing.Size(180, 22);
 			this.mnuSettings.Text = "Settings";
 			this.mnuSettings.Click += new System.EventHandler(this.MnuSettings_Click);
 			// 
-			// helpToolStripMenuItem
+			// mnuLanguages
 			// 
-			this.helpToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+			this.mnuLanguages.Name = "mnuLanguages";
+			this.mnuLanguages.Size = new System.Drawing.Size(180, 22);
+			this.mnuLanguages.Text = "Languages";
+			// 
+			// mnuHelp
+			// 
+			this.mnuHelp.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.mnuOpenRAWiki,
             this.mnuOpenRATraitWiki,
             this.mnuAbout});
-			this.helpToolStripMenuItem.Name = "helpToolStripMenuItem";
-			this.helpToolStripMenuItem.Size = new System.Drawing.Size(47, 21);
-			this.helpToolStripMenuItem.Text = "Help";
+			this.mnuHelp.Name = "mnuHelp";
+			this.mnuHelp.Size = new System.Drawing.Size(47, 21);
+			this.mnuHelp.Text = "Help";
 			// 
 			// mnuOpenRAWiki
 			// 
@@ -352,12 +360,12 @@
 		private System.Windows.Forms.SplitContainer splitContainer1;
 		private System.Windows.Forms.TreeView modFileList;
 		private System.Windows.Forms.MenuStrip menu;
-		private System.Windows.Forms.ToolStripMenuItem fileToolStripMenuItem;
+		private System.Windows.Forms.ToolStripMenuItem mnuFile;
 		private System.Windows.Forms.ToolStripMenuItem mnuExit;
-		private System.Windows.Forms.ToolStripMenuItem modToolStripMenuItem;
-		private System.Windows.Forms.ToolStripMenuItem menuBasicInfomation;
+		private System.Windows.Forms.ToolStripMenuItem mnuMod;
+		private System.Windows.Forms.ToolStripMenuItem mnuBasicInformation;
 		private System.Windows.Forms.ToolStripMenuItem mnuRunMod;
-		private System.Windows.Forms.ToolStripMenuItem helpToolStripMenuItem;
+		private System.Windows.Forms.ToolStripMenuItem mnuHelp;
 		private System.Windows.Forms.ToolStripMenuItem mnuOpenRAWiki;
 		private System.Windows.Forms.ToolStripMenuItem mnuOpenRATraitWiki;
 		private System.Windows.Forms.ToolStripMenuItem mnuAbout;
@@ -371,7 +379,8 @@
 		private System.Windows.Forms.SplitContainer splitContainer2;
 		private ctrlOutputMessage ctrlOutputMessage1;
 		private System.Windows.Forms.GroupBox gbMain;
-		private System.Windows.Forms.ToolStripMenuItem toolsToolStripMenuItem;
+		private System.Windows.Forms.ToolStripMenuItem mnuTools;
 		private System.Windows.Forms.ToolStripMenuItem mnuSettings;
+		private System.Windows.Forms.ToolStripMenuItem mnuLanguages;
 	}
 }

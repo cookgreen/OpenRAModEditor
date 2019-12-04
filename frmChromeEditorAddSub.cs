@@ -22,6 +22,19 @@ namespace OpenRAModEditor
 			InitializeComponent();
 			this.oraMod = oraMod;
 			this.parentChromeNode = parentChromeNode;
+
+			InitLanguageOptions();
+		}
+
+		private void InitLanguageOptions()
+		{
+			Text = LanguageManager.Instance.GetLocalizedString("ui_chrome_editor_add_chrome_title");
+			lbChromeSubName.Text = LanguageManager.Instance.GetLocalizedString("ui_chrome_editor_add_sub_chrome_name");
+			groupBox1.Text = LanguageManager.Instance.GetLocalizedString("ui_chrome_editor_add_sub_image_preview");
+			lbWidth.Text = LanguageManager.Instance.GetLocalizedString("ui_width");
+			lbHeight.Text = LanguageManager.Instance.GetLocalizedString("ui_height");
+			btnOK.Text = LanguageManager.Instance.GetLocalizedString("ui_ok");
+			btnCancel.Text = LanguageManager.Instance.GetLocalizedString("ui_cancel");
 		}
 
 		private void FrmChromeEditorAddSub_Load(object sender, EventArgs e)
@@ -105,8 +118,11 @@ namespace OpenRAModEditor
 				}
 				else
 				{
-					MessageBox.Show(string.Format("The node with name {0} has already existed!", txtChromeName.Text), "Error",
-					 MessageBoxButtons.OK, MessageBoxIcon.Error);
+					MessageBox.Show(
+					 string.Format("The node with name {0} has already existed!", txtChromeName.Text), 
+					 "Error",
+					 MessageBoxButtons.OK, 
+					 MessageBoxIcon.Error);
 				}
 			}
 			else

@@ -55,6 +55,7 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AppConfig.cs" />
     <Compile Include="frmChromeEditorAddSub.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -182,6 +183,7 @@
     <Compile Include="ICloseableForm.cs" />
     <Compile Include="INotifyRunStateChanged.cs" />
     <Compile Include="ISavableControl.cs" />
+    <Compile Include="LanguageManager.cs" />
     <Compile Include="MiniYaml.cs" />
     <Compile Include="MiniYamlNode.cs" />
     <Compile Include="ModConfig.cs" />
@@ -265,6 +267,12 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <None Include="languages\cns\ui.yaml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="languages\en\ui.yaml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -280,6 +288,9 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="config.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="development.ico" />
     <Content Include="images\file.png" />
     <Content Include="images\file_yaml.png" />

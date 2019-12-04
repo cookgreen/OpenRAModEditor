@@ -28,25 +28,25 @@
 		/// </summary>
 		private void InitializeComponent()
 		{
-			this.label1 = new System.Windows.Forms.Label();
+			this.lbLoadingText = new System.Windows.Forms.Label();
 			this.SuspendLayout();
 			// 
-			// label1
+			// lbLoadingText
 			// 
-			this.label1.AutoSize = true;
-			this.label1.Font = new System.Drawing.Font("宋体", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-			this.label1.Location = new System.Drawing.Point(105, 97);
-			this.label1.Name = "label1";
-			this.label1.Size = new System.Drawing.Size(173, 29);
-			this.label1.TabIndex = 0;
-			this.label1.Text = "Loading...";
+			this.lbLoadingText.AutoSize = true;
+			this.lbLoadingText.Font = new System.Drawing.Font("宋体", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+			this.lbLoadingText.Location = new System.Drawing.Point(105, 97);
+			this.lbLoadingText.Name = "lbLoadingText";
+			this.lbLoadingText.Size = new System.Drawing.Size(173, 29);
+			this.lbLoadingText.TabIndex = 0;
+			this.lbLoadingText.Text = "Loading...";
 			// 
 			// frmLoading
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.ClientSize = new System.Drawing.Size(397, 232);
-			this.Controls.Add(this.label1);
+			this.Controls.Add(this.lbLoadingText);
 			this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
 			this.Name = "frmLoading";
 			this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -58,6 +58,6 @@
 
 		#endregion
 
-		private System.Windows.Forms.Label label1;
+		private System.Windows.Forms.Label lbLoadingText;
 	}
 }

@@ -15,6 +15,16 @@ namespace OpenRAModEditor
 		public frmLoading()
 		{
 			InitializeComponent();
+
+			InitLanguageOptions();
+
+			var newX = Width / 2 - lbLoadingText.Width / 2;
+			lbLoadingText.Location = new Point(newX, lbLoadingText.Location.Y);
+		}
+
+		private void InitLanguageOptions()
+		{
+			lbLoadingText.Text = LanguageManager.Instance.GetLocalizedString("ui_loading_text");
 		}
 	}
 }

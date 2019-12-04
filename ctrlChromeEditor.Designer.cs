@@ -30,19 +30,19 @@
 		{
 			this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
 			this.groupBox1 = new System.Windows.Forms.GroupBox();
-			this.chromeList = new System.Windows.Forms.TreeView();
 			this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
+			this.chromeList = new System.Windows.Forms.TreeView();
 			this.panel2 = new System.Windows.Forms.Panel();
-			this.btnAdd = new System.Windows.Forms.Button();
 			this.btnDelete = new System.Windows.Forms.Button();
+			this.btnAdd = new System.Windows.Forms.Button();
 			this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
 			this.panel1 = new System.Windows.Forms.Panel();
 			this.txtChromeHeight = new System.Windows.Forms.TextBox();
 			this.txtChromeWidth = new System.Windows.Forms.TextBox();
 			this.txtChromeY = new System.Windows.Forms.TextBox();
 			this.txtChromeX = new System.Windows.Forms.TextBox();
-			this.label4 = new System.Windows.Forms.Label();
-			this.label3 = new System.Windows.Forms.Label();
+			this.lbHeight = new System.Windows.Forms.Label();
+			this.lbWidth = new System.Windows.Forms.Label();
 			this.label2 = new System.Windows.Forms.Label();
 			this.label1 = new System.Windows.Forms.Label();
 			this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -81,15 +81,6 @@
 			this.groupBox1.TabStop = false;
 			this.groupBox1.Text = "Chrome";
 			// 
-			// chromeList
-			// 
-			this.chromeList.Dock = System.Windows.Forms.DockStyle.Fill;
-			this.chromeList.Location = new System.Drawing.Point(3, 43);
-			this.chromeList.Name = "chromeList";
-			this.chromeList.Size = new System.Drawing.Size(222, 474);
-			this.chromeList.TabIndex = 0;
-			this.chromeList.AfterSelect += new System.Windows.Forms.TreeViewEventHandler(this.ChromeList_AfterSelect);
-			// 
 			// tableLayoutPanel3
 			// 
 			this.tableLayoutPanel3.ColumnCount = 1;
@@ -105,6 +96,15 @@
 			this.tableLayoutPanel3.Size = new System.Drawing.Size(228, 520);
 			this.tableLayoutPanel3.TabIndex = 0;
 			// 
+			// chromeList
+			// 
+			this.chromeList.Dock = System.Windows.Forms.DockStyle.Fill;
+			this.chromeList.Location = new System.Drawing.Point(3, 43);
+			this.chromeList.Name = "chromeList";
+			this.chromeList.Size = new System.Drawing.Size(222, 474);
+			this.chromeList.TabIndex = 0;
+			this.chromeList.AfterSelect += new System.Windows.Forms.TreeViewEventHandler(this.ChromeList_AfterSelect);
+			// 
 			// panel2
 			// 
 			this.panel2.Controls.Add(this.btnDelete);
@@ -114,6 +114,16 @@
 			this.panel2.Name = "panel2";
 			this.panel2.Size = new System.Drawing.Size(222, 34);
 			this.panel2.TabIndex = 1;
+			// 
+			// btnDelete
+			// 
+			this.btnDelete.Enabled = false;
+			this.btnDelete.Location = new System.Drawing.Point(84, 5);
+			this.btnDelete.Name = "btnDelete";
+			this.btnDelete.Size = new System.Drawing.Size(75, 23);
+			this.btnDelete.TabIndex = 1;
+			this.btnDelete.Text = "Delete";
+			this.btnDelete.UseVisualStyleBackColor = true;
 			// 
 			// btnAdd
 			// 
@@ -125,16 +135,6 @@
 			this.btnAdd.Text = "Add";
 			this.btnAdd.UseVisualStyleBackColor = true;
 			this.btnAdd.Click += new System.EventHandler(this.BtnAdd_Click);
-			// 
-			// btnDelete
-			// 
-			this.btnDelete.Enabled = false;
-			this.btnDelete.Location = new System.Drawing.Point(84, 5);
-			this.btnDelete.Name = "btnDelete";
-			this.btnDelete.Size = new System.Drawing.Size(75, 23);
-			this.btnDelete.TabIndex = 1;
-			this.btnDelete.Text = "Delete";
-			this.btnDelete.UseVisualStyleBackColor = true;
 			// 
 			// tableLayoutPanel2
 			// 
@@ -157,8 +157,8 @@
 			this.panel1.Controls.Add(this.txtChromeWidth);
 			this.panel1.Controls.Add(this.txtChromeY);
 			this.panel1.Controls.Add(this.txtChromeX);
-			this.panel1.Controls.Add(this.label4);
-			this.panel1.Controls.Add(this.label3);
+			this.panel1.Controls.Add(this.lbHeight);
+			this.panel1.Controls.Add(this.lbWidth);
 			this.panel1.Controls.Add(this.label2);
 			this.panel1.Controls.Add(this.label1);
 			this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -199,23 +199,23 @@
 			this.txtChromeX.Size = new System.Drawing.Size(142, 21);
 			this.txtChromeX.TabIndex = 4;
 			// 
-			// label4
+			// lbHeight
 			// 
-			this.label4.AutoSize = true;
-			this.label4.Location = new System.Drawing.Point(12, 84);
-			this.label4.Name = "label4";
-			this.label4.Size = new System.Drawing.Size(47, 12);
-			this.label4.TabIndex = 3;
-			this.label4.Text = "Height:";
+			this.lbHeight.AutoSize = true;
+			this.lbHeight.Location = new System.Drawing.Point(12, 84);
+			this.lbHeight.Name = "lbHeight";
+			this.lbHeight.Size = new System.Drawing.Size(47, 12);
+			this.lbHeight.TabIndex = 3;
+			this.lbHeight.Text = "Height:";
 			// 
-			// label3
+			// lbWidth
 			// 
-			this.label3.AutoSize = true;
-			this.label3.Location = new System.Drawing.Point(12, 59);
-			this.label3.Name = "label3";
-			this.label3.Size = new System.Drawing.Size(41, 12);
-			this.label3.TabIndex = 2;
-			this.label3.Text = "Width:";
+			this.lbWidth.AutoSize = true;
+			this.lbWidth.Location = new System.Drawing.Point(12, 59);
+			this.lbWidth.Name = "lbWidth";
+			this.lbWidth.Size = new System.Drawing.Size(41, 12);
+			this.lbWidth.TabIndex = 2;
+			this.lbWidth.Text = "Width:";
 			// 
 			// label2
 			// 
@@ -279,8 +279,8 @@
 		private System.Windows.Forms.TextBox txtChromeWidth;
 		private System.Windows.Forms.TextBox txtChromeY;
 		private System.Windows.Forms.TextBox txtChromeX;
-		private System.Windows.Forms.Label label4;
-		private System.Windows.Forms.Label label3;
+		private System.Windows.Forms.Label lbHeight;
+		private System.Windows.Forms.Label lbWidth;
 		private System.Windows.Forms.Label label2;
 		private System.Windows.Forms.Label label1;
 		private System.Windows.Forms.PictureBox pictureBox1;

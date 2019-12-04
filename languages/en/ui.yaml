@@ -1,0 +1,75 @@
+Language: 
+	English: en
+		ui_control_panel_title: OpenRA Mod Editor
+		ui_control_panel_new_mod: New Mod
+		ui_control_panel_open_mod: Open Mod
+		ui_control_panel_exit: Exit
+		ui_new_mod_title: Create New Mod
+		ui_new_mod_path: Mod Path
+		ui_new_mod_version: Version
+		ui_new_mod_mod_id: Mod ID
+		ui_new_mod_mod_name: Mod Name
+		ui_new_mod_mod_author: Author
+		ui_create: Create
+		ui_open_mod_title: Open Mod
+		ui_open_mod_mod_path: Mod Path
+		ui_open_mod_mod_version: Version
+		ui_open: Open
+		ui_main_window_title: OpenRA Mod Editor
+		ui_main_window_menu_file: File
+		ui_main_window_menu_file_exit: Exit
+		ui_main_window_menu_mod: Mod
+		ui_main_window_menu_mod_run: Run
+		ui_main_window_menu_tool: Tools
+		ui_main_window_menu_tool_settings: Settings
+		ui_main_window_menu_tool_basic_info: Basic Information
+		ui_main_window_menu_tool_languages: languages
+		ui_main_window_menu_help: Help
+		ui_main_window_menu_help_openra_wiki: OpenRA Wiki
+		ui_main_window_menu_help_openra_traits_wiki: OpenRA Traits Wiki
+		ui_main_window_menu_help_about: About
+		ui_main_window_file_list: File List
+		ui_output_title: Output
+		ui_output_source: Source
+		ui_output_source_compile: Compile
+		ui_output_source_run: Run
+		ui_chrome_editor_chromes_list: Chrome
+		ui_add: Add
+		ui_delete: Delete
+		ui_x: X
+		ui_y: Y
+		ui_width: Width
+		ui_height: Height
+		ui_setting_external_app_extension: Extension
+		ui_setting_external_app_application: Application
+		ui_setting_external_app_add_window_extension: Extension
+		ui_setting_external_app_add_window_Path: Path
+		ui_yaml_editor_yaml_tree: Yaml Tree
+		ui_yaml_editor_yaml_operation: Yaml Operation
+		ui_yaml_editor_node_value: Node Value
+		ui_yaml_editor_add_yaml_node: Add Node
+		ui_yaml_editor_edit_yaml_node: Edit Node
+		ui_yaml_editor_delete_yaml_node: Delete Node
+		ui_yaml_editor_moveforward_yaml_node: Moveforward
+		ui_yaml_editor_movebackward_yaml_node: Movebackward
+		ui_yaml_editor_save: Save File
+		ui_yaml_editor_add_edit_node_node_name: Node Name
+		ui_yaml_editor_add_edit_node_node_value: Node Value
+		ui_ok: OK
+		ui_cancel: Cancel
+		ui_mod_basic_info_editor_mod_id: Mod ID
+		ui_mod_basic_info_editor_engine_version: Engine Version
+		ui_mod_basic_info_editor_mod_assembly: Mod Assembly
+		ui_mod_basic_info_editor_packaging_installer_name: Packaging Installer Name
+		ui_mod_basic_info_editor_packaging_author: Packaging Author
+		ui_open_mod_config: Open mod.config
+		ui_chrome_editor_add_chrome_title: Add Chrome
+		ui_chrome_editor_add_chrome_name: Name
+		ui_chrome_editor_add_chrome_resource: Resource
+		ui_chrome_editor_add_sub_chrome_name: Name
+		ui_chrome_editor_add_sub_image_preview: Image Preview
+		ui_downloading_window_title: Downloading
+		ui_downloading_total_progress: Total Progress
+		ui_hide: Hide
+		ui_loading_text: Loading...
+		ui_resource_browser_title: Resource Browser

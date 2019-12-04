@@ -41,7 +41,38 @@ namespace OpenRAModEditor
 			runtime = new OraModRuntime(mod);
 			runtime.RunStateChanged += Runtime_RunStateChanged;
 
+			mnuLanguages.DropDownItems.Clear();
+			foreach(var locate in LanguageManager.Instance.GetLocates())
+			{
+				var locateMenuItem = mnuLanguages.DropDownItems.Add(LanguageManager.Instance.GetTranslation(locate));
+				locateMenuItem.Click += (o, e) =>
+				{
+					LanguageManager.Instance.AppConfig.Localization = LanguageManager.Instance.GetLocateByTranslation(locateMenuItem.Text);
+					LanguageManager.Instance.AppConfig.Save();
+				};
+			}
+
 			InitializeMod();
+
+			InitLanguageOptions();
+		}
+
+		private void InitLanguageOptions()
+		{
+			Text = LanguageManager.Instance.GetLocalizedString("ui_control_panel_title");
+			mnuFile.Text = LanguageManager.Instance.GetLocalizedString("ui_main_window_menu_file");
+			mnuExit.Text = LanguageManager.Instance.GetLocalizedString("ui_main_window_menu_file_exit");
+			mnuMod.Text = LanguageManager.Instance.GetLocalizedString("ui_main_window_menu_mod");
+			mnuRunMod.Text = LanguageManager.Instance.GetLocalizedString("ui_main_window_menu_mod_run");
+			mnuTools.Text = LanguageManager.Instance.GetLocalizedString("ui_main_window_menu_tool");
+			mnuSettings.Text = LanguageManager.Instance.GetLocalizedString("ui_main_window_menu_tool_settings");
+			mnuBasicInformation.Text = LanguageManager.Instance.GetLocalizedString("ui_main_window_menu_tool_basic_info");
+			mnuLanguages.Text = LanguageManager.Instance.GetLocalizedString("ui_main_window_menu_tool_languages");
+			mnuHelp.Text = LanguageManager.Instance.GetLocalizedString("ui_main_window_menu_help");
+			mnuOpenRAWiki.Text = LanguageManager.Instance.GetLocalizedString("ui_main_window_menu_help_openra_wiki");
+			mnuOpenRATraitWiki.Text = LanguageManager.Instance.GetLocalizedString("ui_main_window_menu_help_openra_traits_wiki");
+			mnuAbout.Text = LanguageManager.Instance.GetLocalizedString("ui_main_window_menu_help_about");
+			groupBox1.Text = LanguageManager.Instance.GetLocalizedString("ui_main_window_file_list");
 		}
 
 		private void InitializeMod()

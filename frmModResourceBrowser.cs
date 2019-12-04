@@ -19,6 +19,13 @@ namespace OpenRAModEditor
 		{
 			InitializeComponent();
 			this.oraMod = oraMod;
+
+			InitLanguageOptions();
+		}
+
+		private void InitLanguageOptions()
+		{
+			Text = LanguageManager.Instance.GetLocalizedString("ui_resource_browser_title");
 		}
 
 		private void BtnOK_Click(object sender, EventArgs e)

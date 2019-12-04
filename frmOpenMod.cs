@@ -18,6 +18,17 @@ namespace OpenRAModEditor
 		public frmOpenMod()
 		{
 			InitializeComponent();
+
+			InitLanguageOptions();
+		}
+
+		private void InitLanguageOptions()
+		{
+			Text = LanguageManager.Instance.GetLocalizedString("ui_open_mod_title");
+			lbModPath.Text = LanguageManager.Instance.GetLocalizedString("ui_open_mod_mod_path");
+			lbModVersion.Text = LanguageManager.Instance.GetLocalizedString("ui_open_mod_mod_version");
+			btnOpen.Text = LanguageManager.Instance.GetLocalizedString("ui_open");
+			btnCancel.Text = LanguageManager.Instance.GetLocalizedString("ui_cancel");
 		}
 
 		private void BtnCancel_Click(object sender, EventArgs e)

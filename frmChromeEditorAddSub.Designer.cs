@@ -31,11 +31,11 @@
 			this.btnOK = new System.Windows.Forms.Button();
 			this.btnCancel = new System.Windows.Forms.Button();
 			this.txtChromeName = new System.Windows.Forms.TextBox();
-			this.label1 = new System.Windows.Forms.Label();
+			this.lbChromeSubName = new System.Windows.Forms.Label();
 			this.previewImage = new System.Windows.Forms.PictureBox();
 			this.groupBox1 = new System.Windows.Forms.GroupBox();
-			this.label5 = new System.Windows.Forms.Label();
-			this.label4 = new System.Windows.Forms.Label();
+			this.lbHeight = new System.Windows.Forms.Label();
+			this.lbWidth = new System.Windows.Forms.Label();
 			this.label3 = new System.Windows.Forms.Label();
 			this.label2 = new System.Windows.Forms.Label();
 			this.txtChromeY = new System.Windows.Forms.TextBox();
@@ -73,14 +73,14 @@
 			this.txtChromeName.Size = new System.Drawing.Size(478, 21);
 			this.txtChromeName.TabIndex = 8;
 			// 
-			// label1
+			// lbChromeSubName
 			// 
-			this.label1.AutoSize = true;
-			this.label1.Location = new System.Drawing.Point(13, 12);
-			this.label1.Name = "label1";
-			this.label1.Size = new System.Drawing.Size(35, 12);
-			this.label1.TabIndex = 7;
-			this.label1.Text = "Name:";
+			this.lbChromeSubName.AutoSize = true;
+			this.lbChromeSubName.Location = new System.Drawing.Point(13, 12);
+			this.lbChromeSubName.Name = "lbChromeSubName";
+			this.lbChromeSubName.Size = new System.Drawing.Size(35, 12);
+			this.lbChromeSubName.TabIndex = 7;
+			this.lbChromeSubName.Text = "Name:";
 			// 
 			// previewImage
 			// 
@@ -94,8 +94,8 @@
 			// 
 			// groupBox1
 			// 
-			this.groupBox1.Controls.Add(this.label5);
-			this.groupBox1.Controls.Add(this.label4);
+			this.groupBox1.Controls.Add(this.lbHeight);
+			this.groupBox1.Controls.Add(this.lbWidth);
 			this.groupBox1.Controls.Add(this.label3);
 			this.groupBox1.Controls.Add(this.label2);
 			this.groupBox1.Controls.Add(this.txtChromeY);
@@ -110,23 +110,23 @@
 			this.groupBox1.TabStop = false;
 			this.groupBox1.Text = "Image Preview";
 			// 
-			// label5
+			// lbHeight
 			// 
-			this.label5.AutoSize = true;
-			this.label5.Location = new System.Drawing.Point(322, 101);
-			this.label5.Name = "label5";
-			this.label5.Size = new System.Drawing.Size(47, 12);
-			this.label5.TabIndex = 30;
-			this.label5.Text = "Height:";
+			this.lbHeight.AutoSize = true;
+			this.lbHeight.Location = new System.Drawing.Point(322, 101);
+			this.lbHeight.Name = "lbHeight";
+			this.lbHeight.Size = new System.Drawing.Size(47, 12);
+			this.lbHeight.TabIndex = 30;
+			this.lbHeight.Text = "Height:";
 			// 
-			// label4
+			// lbWidth
 			// 
-			this.label4.AutoSize = true;
-			this.label4.Location = new System.Drawing.Point(322, 74);
-			this.label4.Name = "label4";
-			this.label4.Size = new System.Drawing.Size(41, 12);
-			this.label4.TabIndex = 29;
-			this.label4.Text = "Width:";
+			this.lbWidth.AutoSize = true;
+			this.lbWidth.Location = new System.Drawing.Point(322, 74);
+			this.lbWidth.Name = "lbWidth";
+			this.lbWidth.Size = new System.Drawing.Size(41, 12);
+			this.lbWidth.TabIndex = 29;
+			this.lbWidth.Text = "Width:";
 			// 
 			// label3
 			// 
@@ -187,7 +187,7 @@
 			this.Controls.Add(this.btnOK);
 			this.Controls.Add(this.btnCancel);
 			this.Controls.Add(this.txtChromeName);
-			this.Controls.Add(this.label1);
+			this.Controls.Add(this.lbChromeSubName);
 			this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
 			this.MaximizeBox = false;
 			this.MinimizeBox = false;
@@ -210,11 +210,11 @@
 		private System.Windows.Forms.Button btnOK;
 		private System.Windows.Forms.Button btnCancel;
 		private System.Windows.Forms.TextBox txtChromeName;
-		private System.Windows.Forms.Label label1;
+		private System.Windows.Forms.Label lbChromeSubName;
 		private System.Windows.Forms.PictureBox previewImage;
 		private System.Windows.Forms.GroupBox groupBox1;
-		private System.Windows.Forms.Label label5;
-		private System.Windows.Forms.Label label4;
+		private System.Windows.Forms.Label lbHeight;
+		private System.Windows.Forms.Label lbWidth;
 		private System.Windows.Forms.Label label3;
 		private System.Windows.Forms.Label label2;
 		private System.Windows.Forms.TextBox txtChromeY;

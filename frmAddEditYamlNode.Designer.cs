@@ -28,31 +28,31 @@
 		/// </summary>
 		private void InitializeComponent()
 		{
-			this.label1 = new System.Windows.Forms.Label();
-			this.label2 = new System.Windows.Forms.Label();
+			this.lbNodeName = new System.Windows.Forms.Label();
+			this.lbNodeValue = new System.Windows.Forms.Label();
 			this.txtNodeName = new System.Windows.Forms.TextBox();
 			this.txtNodeValue = new System.Windows.Forms.TextBox();
 			this.btnCancel = new System.Windows.Forms.Button();
 			this.btnOK = new System.Windows.Forms.Button();
 			this.SuspendLayout();
 			// 
-			// label1
+			// lbNodeName
 			// 
-			this.label1.AutoSize = true;
-			this.label1.Location = new System.Drawing.Point(12, 19);
-			this.label1.Name = "label1";
-			this.label1.Size = new System.Drawing.Size(65, 12);
-			this.label1.TabIndex = 0;
-			this.label1.Text = "Node Name:";
+			this.lbNodeName.AutoSize = true;
+			this.lbNodeName.Location = new System.Drawing.Point(12, 19);
+			this.lbNodeName.Name = "lbNodeName";
+			this.lbNodeName.Size = new System.Drawing.Size(65, 12);
+			this.lbNodeName.TabIndex = 0;
+			this.lbNodeName.Text = "Node Name:";
 			// 
-			// label2
+			// lbNodeValue
 			// 
-			this.label2.AutoSize = true;
-			this.label2.Location = new System.Drawing.Point(12, 57);
-			this.label2.Name = "label2";
-			this.label2.Size = new System.Drawing.Size(71, 12);
-			this.label2.TabIndex = 1;
-			this.label2.Text = "Node Value:";
+			this.lbNodeValue.AutoSize = true;
+			this.lbNodeValue.Location = new System.Drawing.Point(12, 57);
+			this.lbNodeValue.Name = "lbNodeValue";
+			this.lbNodeValue.Size = new System.Drawing.Size(71, 12);
+			this.lbNodeValue.TabIndex = 1;
+			this.lbNodeValue.Text = "Node Value:";
 			// 
 			// txtNodeName
 			// 
@@ -97,8 +97,8 @@
 			this.Controls.Add(this.btnCancel);
 			this.Controls.Add(this.txtNodeValue);
 			this.Controls.Add(this.txtNodeName);
-			this.Controls.Add(this.label2);
-			this.Controls.Add(this.label1);
+			this.Controls.Add(this.lbNodeValue);
+			this.Controls.Add(this.lbNodeName);
 			this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
 			this.MaximizeBox = false;
 			this.MinimizeBox = false;
@@ -114,8 +114,8 @@
 
 		#endregion
 
-		private System.Windows.Forms.Label label1;
-		private System.Windows.Forms.Label label2;
+		private System.Windows.Forms.Label lbNodeName;
+		private System.Windows.Forms.Label lbNodeValue;
 		private System.Windows.Forms.TextBox txtNodeName;
 		private System.Windows.Forms.TextBox txtNodeValue;
 		private System.Windows.Forms.Button btnCancel;

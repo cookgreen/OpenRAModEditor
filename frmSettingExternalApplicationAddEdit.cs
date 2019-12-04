@@ -39,6 +39,16 @@ namespace OpenRAModEditor
 					txtPath.Text = externalApplication.Application;
 					break;
 			}
+
+			InitLanguageOptions();
+		}
+
+		private void InitLanguageOptions()
+		{
+			lbExtension.Text = LanguageManager.Instance.GetLocalizedString("ui_setting_external_app_add_window_extension");
+			lbAppPath.Text = LanguageManager.Instance.GetLocalizedString("ui_setting_external_app_add_window_Path");
+			btnOK.Text = LanguageManager.Instance.GetLocalizedString("ui_ok");
+			btnCancel.Text = LanguageManager.Instance.GetLocalizedString("ui_cancel");
 		}
 
 		private void BtnOK_Click(object sender, EventArgs e)

@@ -34,6 +34,16 @@ namespace OpenRAModEditor
 			progressBar2.Maximum = 100;
 			changeButtonTextDelegate = new ChangeButtonTextDelegate(ChangeButtonTextDelegateMethod);
 			closeFormDelegate = new CloseFormDelegate(CloseFormDelegateMethod);
+
+			InitLanguageOptions();
+		}
+
+		private void InitLanguageOptions()
+		{
+			Text = LanguageManager.Instance.GetLocalizedString("ui_downloading_window_title");
+			lbTotalProgress.Text = LanguageManager.Instance.GetLocalizedString("ui_downloading_total_progress");
+			btnHide.Text = LanguageManager.Instance.GetLocalizedString("ui_hide");
+			btnCancel.Text = LanguageManager.Instance.GetLocalizedString("ui_cancel");
 		}
 
 		private void CloseFormDelegateMethod()

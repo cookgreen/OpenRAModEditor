@@ -21,6 +21,16 @@ namespace OpenRAModEditor
 			InitializeComponent();
 			this.oraMod = oraMod;
 			this.chromeYaml = chromeYaml;
+
+			InitLanguageOptions();
+		}
+
+		private void InitLanguageOptions()
+		{
+			lbChromeName.Text = LanguageManager.Instance.GetLocalizedString("ui_chrome_editor_add_chrome_name");
+			lbChromeResource.Text = LanguageManager.Instance.GetLocalizedString("ui_chrome_editor_add_chrome_resource");
+			btnOK.Text = LanguageManager.Instance.GetLocalizedString("ui_ok");
+			btnCancel.Text = LanguageManager.Instance.GetLocalizedString("ui_cancel");
 		}
 
 		private void BtnChoose_Click(object sender, EventArgs e)

@@ -12,9 +12,24 @@ namespace OpenRAModEditor
 {
 	public partial class frmControlPanel : Form
 	{
+		private AppConfig config;
+
 		public frmControlPanel()
 		{
 			InitializeComponent();
+
+			config = AppConfig.LoadConfig("config.xml");
+			LanguageManager.Instance.AppConfig = config;
+
+			InitLanguageOptions();
+		}
+
+		private void InitLanguageOptions()
+		{
+			Text = LanguageManager.Instance.GetLocalizedString("ui_control_panel_title");
+			btnNewMod.Text = LanguageManager.Instance.GetLocalizedString("ui_control_panel_new_mod");
+			btnOpenMod.Text = LanguageManager.Instance.GetLocalizedString("ui_control_panel_open_mod");
+			btnExit.Text = LanguageManager.Instance.GetLocalizedString("ui_control_panel_exit");
 		}
 
 		private void BtnExit_Click(object sender, EventArgs e)

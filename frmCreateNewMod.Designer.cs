@@ -28,29 +28,29 @@
 		/// </summary>
 		private void InitializeComponent()
 		{
-			this.label1 = new System.Windows.Forms.Label();
+			this.lbModVersion = new System.Windows.Forms.Label();
 			this.cmbVersionList = new System.Windows.Forms.ComboBox();
-			this.label2 = new System.Windows.Forms.Label();
+			this.lbModID = new System.Windows.Forms.Label();
 			this.txtModID = new System.Windows.Forms.TextBox();
-			this.label3 = new System.Windows.Forms.Label();
+			this.lbModName = new System.Windows.Forms.Label();
 			this.txtModName = new System.Windows.Forms.TextBox();
-			this.label4 = new System.Windows.Forms.Label();
+			this.lbModAuthor = new System.Windows.Forms.Label();
 			this.txtModAuthor = new System.Windows.Forms.TextBox();
 			this.btnCreate = new System.Windows.Forms.Button();
 			this.btnCancel = new System.Windows.Forms.Button();
-			this.label5 = new System.Windows.Forms.Label();
+			this.lbModPath = new System.Windows.Forms.Label();
 			this.txtPath = new System.Windows.Forms.TextBox();
 			this.btnBrowse = new System.Windows.Forms.Button();
 			this.SuspendLayout();
 			// 
-			// label1
+			// lbModVersion
 			// 
-			this.label1.AutoSize = true;
-			this.label1.Location = new System.Drawing.Point(13, 36);
-			this.label1.Name = "label1";
-			this.label1.Size = new System.Drawing.Size(53, 12);
-			this.label1.TabIndex = 0;
-			this.label1.Text = "Version:";
+			this.lbModVersion.AutoSize = true;
+			this.lbModVersion.Location = new System.Drawing.Point(13, 36);
+			this.lbModVersion.Name = "lbModVersion";
+			this.lbModVersion.Size = new System.Drawing.Size(53, 12);
+			this.lbModVersion.TabIndex = 0;
+			this.lbModVersion.Text = "Version:";
 			// 
 			// cmbVersionList
 			// 
@@ -61,14 +61,14 @@
 			this.cmbVersionList.Size = new System.Drawing.Size(233, 20);
 			this.cmbVersionList.TabIndex = 1;
 			// 
-			// label2
+			// lbModID
 			// 
-			this.label2.AutoSize = true;
-			this.label2.Location = new System.Drawing.Point(13, 62);
-			this.label2.Name = "label2";
-			this.label2.Size = new System.Drawing.Size(47, 12);
-			this.label2.TabIndex = 2;
-			this.label2.Text = "Mod ID:";
+			this.lbModID.AutoSize = true;
+			this.lbModID.Location = new System.Drawing.Point(13, 62);
+			this.lbModID.Name = "lbModID";
+			this.lbModID.Size = new System.Drawing.Size(47, 12);
+			this.lbModID.TabIndex = 2;
+			this.lbModID.Text = "Mod ID:";
 			// 
 			// txtModID
 			// 
@@ -77,14 +77,14 @@
 			this.txtModID.Size = new System.Drawing.Size(233, 21);
 			this.txtModID.TabIndex = 3;
 			// 
-			// label3
+			// lbModName
 			// 
-			this.label3.AutoSize = true;
-			this.label3.Location = new System.Drawing.Point(13, 89);
-			this.label3.Name = "label3";
-			this.label3.Size = new System.Drawing.Size(59, 12);
-			this.label3.TabIndex = 4;
-			this.label3.Text = "Mod Name:";
+			this.lbModName.AutoSize = true;
+			this.lbModName.Location = new System.Drawing.Point(13, 89);
+			this.lbModName.Name = "lbModName";
+			this.lbModName.Size = new System.Drawing.Size(59, 12);
+			this.lbModName.TabIndex = 4;
+			this.lbModName.Text = "Mod Name:";
 			// 
 			// txtModName
 			// 
@@ -93,14 +93,14 @@
 			this.txtModName.Size = new System.Drawing.Size(233, 21);
 			this.txtModName.TabIndex = 5;
 			// 
-			// label4
+			// lbModAuthor
 			// 
-			this.label4.AutoSize = true;
-			this.label4.Location = new System.Drawing.Point(13, 116);
-			this.label4.Name = "label4";
-			this.label4.Size = new System.Drawing.Size(47, 12);
-			this.label4.TabIndex = 6;
-			this.label4.Text = "Author:";
+			this.lbModAuthor.AutoSize = true;
+			this.lbModAuthor.Location = new System.Drawing.Point(13, 116);
+			this.lbModAuthor.Name = "lbModAuthor";
+			this.lbModAuthor.Size = new System.Drawing.Size(47, 12);
+			this.lbModAuthor.TabIndex = 6;
+			this.lbModAuthor.Text = "Author:";
 			// 
 			// txtModAuthor
 			// 
@@ -129,14 +129,14 @@
 			this.btnCancel.UseVisualStyleBackColor = true;
 			this.btnCancel.Click += new System.EventHandler(this.BtnCancel_Click);
 			// 
-			// label5
+			// lbModPath
 			// 
-			this.label5.AutoSize = true;
-			this.label5.Location = new System.Drawing.Point(13, 9);
-			this.label5.Name = "label5";
-			this.label5.Size = new System.Drawing.Size(59, 12);
-			this.label5.TabIndex = 10;
-			this.label5.Text = "Mod Path:";
+			this.lbModPath.AutoSize = true;
+			this.lbModPath.Location = new System.Drawing.Point(13, 9);
+			this.lbModPath.Name = "lbModPath";
+			this.lbModPath.Size = new System.Drawing.Size(59, 12);
+			this.lbModPath.TabIndex = 10;
+			this.lbModPath.Text = "Mod Path:";
 			// 
 			// txtPath
 			// 
@@ -163,17 +163,17 @@
 			this.ClientSize = new System.Drawing.Size(324, 180);
 			this.Controls.Add(this.btnBrowse);
 			this.Controls.Add(this.txtPath);
-			this.Controls.Add(this.label5);
+			this.Controls.Add(this.lbModPath);
 			this.Controls.Add(this.btnCancel);
 			this.Controls.Add(this.btnCreate);
 			this.Controls.Add(this.txtModAuthor);
-			this.Controls.Add(this.label4);
+			this.Controls.Add(this.lbModAuthor);
 			this.Controls.Add(this.txtModName);
-			this.Controls.Add(this.label3);
+			this.Controls.Add(this.lbModName);
 			this.Controls.Add(this.txtModID);
-			this.Controls.Add(this.label2);
+			this.Controls.Add(this.lbModID);
 			this.Controls.Add(this.cmbVersionList);
-			this.Controls.Add(this.label1);
+			this.Controls.Add(this.lbModVersion);
 			this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
 			this.MaximizeBox = false;
 			this.MinimizeBox = false;
@@ -190,17 +190,17 @@
 
 		#endregion
 
-		private System.Windows.Forms.Label label1;
+		private System.Windows.Forms.Label lbModVersion;
 		private System.Windows.Forms.ComboBox cmbVersionList;
-		private System.Windows.Forms.Label label2;
+		private System.Windows.Forms.Label lbModID;
 		private System.Windows.Forms.TextBox txtModID;
-		private System.Windows.Forms.Label label3;
+		private System.Windows.Forms.Label lbModName;
 		private System.Windows.Forms.TextBox txtModName;
-		private System.Windows.Forms.Label label4;
+		private System.Windows.Forms.Label lbModAuthor;
 		private System.Windows.Forms.TextBox txtModAuthor;
 		private System.Windows.Forms.Button btnCreate;
 		private System.Windows.Forms.Button btnCancel;
-		private System.Windows.Forms.Label label5;
+		private System.Windows.Forms.Label lbModPath;
 		private System.Windows.Forms.TextBox txtPath;
 		private System.Windows.Forms.Button btnBrowse;
 	}

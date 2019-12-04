@@ -19,6 +19,21 @@ namespace OpenRAModEditor
 			InitializeComponent();
 			this.miniYaml = miniYaml;
 			keyValuePairs = new Dictionary<TreeNode, MiniYamlNode>();
+
+			InitLanguageOptions();
+		}
+
+		private void InitLanguageOptions()
+		{
+			groupBox1.Text = LanguageManager.Instance.GetLocalizedString("ui_yaml_editor_yaml_tree");
+			groupBox2.Text = LanguageManager.Instance.GetLocalizedString("ui_yaml_editor_yaml_operation");
+			groupBox3.Text = LanguageManager.Instance.GetLocalizedString("ui_yaml_editor_node_value");
+			btnAddYamlNode.Text = LanguageManager.Instance.GetLocalizedString("ui_yaml_editor_add_yaml_node");
+			btnEditYamlNode.Text = LanguageManager.Instance.GetLocalizedString("ui_yaml_editor_edit_yaml_node");
+			btnDeleteYamlNode.Text = LanguageManager.Instance.GetLocalizedString("ui_yaml_editor_delete_yaml_node");
+			btnMoveForward.Text = LanguageManager.Instance.GetLocalizedString("ui_yaml_editor_moveforward_yaml_node");
+			btnMoveBackward.Text = LanguageManager.Instance.GetLocalizedString("ui_yaml_editor_movebackward_yaml_node");
+			btnSaveChangeToFile.Text = LanguageManager.Instance.GetLocalizedString("ui_yaml_editor_save");
 		}
 
 		private void CtrlVisualYamlEditor_Load(object sender, EventArgs e)
