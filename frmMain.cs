@@ -47,7 +47,8 @@ namespace OpenRAModEditor
 				var locateMenuItem = mnuLanguages.DropDownItems.Add(LanguageManager.Instance.GetTranslation(locate));
 				locateMenuItem.Click += (o, e) =>
 				{
-					LanguageManager.Instance.AppConfig.Localization = LanguageManager.Instance.GetLocateByTranslation(locateMenuItem.Text);
+					LanguageManager.Instance.AppConfig.Localization = locateMenuItem.Text;
+					InitLanguageOptions();
 					LanguageManager.Instance.AppConfig.Save();
 				};
 			}
