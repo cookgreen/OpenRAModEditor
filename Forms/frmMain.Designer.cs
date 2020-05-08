@@ -43,7 +43,6 @@
 			this.images = new System.Windows.Forms.ImageList(this.components);
 			this.splitContainer2 = new System.Windows.Forms.SplitContainer();
 			this.gbMain = new System.Windows.Forms.GroupBox();
-			this.ctrlOutputMessage1 = new OpenRAModEditor.ctrlOutputMessage();
 			this.menu = new System.Windows.Forms.MenuStrip();
 			this.mnuFile = new System.Windows.Forms.ToolStripMenuItem();
 			this.mnuExit = new System.Windows.Forms.ToolStripMenuItem();
@@ -66,7 +65,6 @@
 			this.ctxMenu.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.splitContainer2)).BeginInit();
 			this.splitContainer2.Panel1.SuspendLayout();
-			this.splitContainer2.Panel2.SuspendLayout();
 			this.splitContainer2.SuspendLayout();
 			this.menu.SuspendLayout();
 			this.SuspendLayout();
@@ -190,10 +188,6 @@
 			// splitContainer2.Panel1
 			// 
 			this.splitContainer2.Panel1.Controls.Add(this.gbMain);
-			// 
-			// splitContainer2.Panel2
-			// 
-			this.splitContainer2.Panel2.Controls.Add(this.ctrlOutputMessage1);
 			this.splitContainer2.Size = new System.Drawing.Size(804, 552);
 			this.splitContainer2.SplitterDistance = 420;
 			this.splitContainer2.TabIndex = 0;
@@ -206,14 +200,6 @@
 			this.gbMain.Size = new System.Drawing.Size(804, 420);
 			this.gbMain.TabIndex = 0;
 			this.gbMain.TabStop = false;
-			// 
-			// ctrlOutputMessage1
-			// 
-			this.ctrlOutputMessage1.Dock = System.Windows.Forms.DockStyle.Fill;
-			this.ctrlOutputMessage1.Location = new System.Drawing.Point(0, 0);
-			this.ctrlOutputMessage1.Name = "ctrlOutputMessage1";
-			this.ctrlOutputMessage1.Size = new System.Drawing.Size(804, 128);
-			this.ctrlOutputMessage1.TabIndex = 0;
 			// 
 			// menu
 			// 
@@ -239,7 +225,7 @@
 			// mnuExit
 			// 
 			this.mnuExit.Name = "mnuExit";
-			this.mnuExit.Size = new System.Drawing.Size(180, 22);
+			this.mnuExit.Size = new System.Drawing.Size(96, 22);
 			this.mnuExit.Text = "Exit";
 			this.mnuExit.Click += new System.EventHandler(this.MnuExit_Click);
 			// 
@@ -255,14 +241,14 @@
 			// mnuBasicInformation
 			// 
 			this.mnuBasicInformation.Name = "mnuBasicInformation";
-			this.mnuBasicInformation.Size = new System.Drawing.Size(180, 22);
+			this.mnuBasicInformation.Size = new System.Drawing.Size(173, 22);
 			this.mnuBasicInformation.Text = "Basic Infomation";
 			this.mnuBasicInformation.Click += new System.EventHandler(this.MenuBasicInfomation_Click);
 			// 
 			// mnuRunMod
 			// 
 			this.mnuRunMod.Name = "mnuRunMod";
-			this.mnuRunMod.Size = new System.Drawing.Size(180, 22);
+			this.mnuRunMod.Size = new System.Drawing.Size(173, 22);
 			this.mnuRunMod.Text = "Run";
 			this.mnuRunMod.Click += new System.EventHandler(this.MnuRunMod_Click);
 			// 
@@ -343,7 +329,6 @@
 			this.groupBox1.ResumeLayout(false);
 			this.ctxMenu.ResumeLayout(false);
 			this.splitContainer2.Panel1.ResumeLayout(false);
-			this.splitContainer2.Panel2.ResumeLayout(false);
 			((System.ComponentModel.ISupportInitialize)(this.splitContainer2)).EndInit();
 			this.splitContainer2.ResumeLayout(false);
 			this.menu.ResumeLayout(false);

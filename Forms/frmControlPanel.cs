@@ -1,4 +1,5 @@
-﻿using System;
+﻿using OpenRAModEditor.Interfaces;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -10,7 +11,7 @@ using System.Windows.Forms;
 
 namespace OpenRAModEditor
 {
-	public partial class frmControlPanel : Form
+	public partial class frmControlPanel : Form, ILocalization
 	{
 		private AppConfig config;
 
@@ -24,7 +25,7 @@ namespace OpenRAModEditor
 			InitLanguageOptions();
 		}
 
-		private void InitLanguageOptions()
+		public void InitLanguageOptions()
 		{
 			Text = LanguageManager.Instance.GetLocalizedString("ui_control_panel_title");
 			btnNewMod.Text = LanguageManager.Instance.GetLocalizedString("ui_control_panel_new_mod");

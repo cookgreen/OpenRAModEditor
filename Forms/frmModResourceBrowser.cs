@@ -1,4 +1,5 @@
-﻿using System;
+﻿using OpenRAModEditor.Interfaces;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -11,7 +12,7 @@ using System.Windows.Forms;
 
 namespace OpenRAModEditor
 {
-	public partial class frmModResourceBrowser : Form
+	public partial class frmModResourceBrowser : Form, ILocalization
 	{
 		public string SelectedResource;
 		private OraMod oraMod;
@@ -23,7 +24,7 @@ namespace OpenRAModEditor
 			InitLanguageOptions();
 		}
 
-		private void InitLanguageOptions()
+		public void InitLanguageOptions()
 		{
 			Text = LanguageManager.Instance.GetLocalizedString("ui_resource_browser_title");
 		}

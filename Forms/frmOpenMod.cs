@@ -1,4 +1,5 @@
-﻿using System;
+﻿using OpenRAModEditor.Interfaces;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -11,7 +12,7 @@ using System.Windows.Forms;
 
 namespace OpenRAModEditor
 {
-	public partial class frmOpenMod : Form, ICloseableForm
+	public partial class frmOpenMod : Form, ICloseableForm, ILocalization
 	{
 		private ModConfig config;
 		public event Action<object> CloseForm;
@@ -22,7 +23,7 @@ namespace OpenRAModEditor
 			InitLanguageOptions();
 		}
 
-		private void InitLanguageOptions()
+		public void InitLanguageOptions()
 		{
 			Text = LanguageManager.Instance.GetLocalizedString("ui_open_mod_title");
 			lbModPath.Text = LanguageManager.Instance.GetLocalizedString("ui_open_mod_mod_path");

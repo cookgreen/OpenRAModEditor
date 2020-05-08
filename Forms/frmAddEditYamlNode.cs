@@ -1,4 +1,5 @@
-﻿using System;
+﻿using OpenRAModEditor.Interfaces;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -10,7 +11,7 @@ using System.Windows.Forms;
 
 namespace OpenRAModEditor
 {
-	public partial class frmAddEditYamlNode : Form
+	public partial class frmAddEditYamlNode : Form, ILocalization
 	{
 		private int mode;
 		private MiniYamlNode node;
@@ -38,7 +39,7 @@ namespace OpenRAModEditor
 			InitLanguageOptions();
 		}
 
-		private void InitLanguageOptions()
+		public void InitLanguageOptions()
 		{
 			lbNodeName.Text = LanguageManager.Instance.GetLocalizedString("ui_yaml_editor_add_edit_node_node_name");
 			lbNodeValue.Text = LanguageManager.Instance.GetLocalizedString("ui_yaml_editor_add_edit_node_node_value");

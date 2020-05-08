@@ -10,10 +10,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Newtonsoft.Json;
+using OpenRAModEditor.Interfaces;
 
 namespace OpenRAModEditor
 {
-	public partial class frmCreateNewMod : Form, ICloseableForm
+	public partial class frmCreateNewMod : Form, ICloseableForm, ILocalization
 	{
 		private OraMod mod;
 		private GithubAPI api;
@@ -30,7 +31,7 @@ namespace OpenRAModEditor
 			InitLanguageOptions();
 		}
 
-		private void InitLanguageOptions()
+		public void InitLanguageOptions()
 		{
 			Text = LanguageManager.Instance.GetLocalizedString("ui_new_mod_title");
 			lbModPath.Text = LanguageManager.Instance.GetLocalizedString("ui_new_mod_path");

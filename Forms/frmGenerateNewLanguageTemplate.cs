@@ -9,11 +9,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace OpenRAModEditor
+namespace OpenRAModEditor.Forms
 {
-	public partial class frmTraitBrowser : Form, ILocalization
+	public partial class frmGenerateNewLanguageTemplate : Form, ILocalization
 	{
-		public frmTraitBrowser()
+		public frmGenerateNewLanguageTemplate()
 		{
 			InitializeComponent();
 		}

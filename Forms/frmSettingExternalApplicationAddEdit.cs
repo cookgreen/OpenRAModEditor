@@ -1,4 +1,5 @@
-﻿using System;
+﻿using OpenRAModEditor.Interfaces;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -10,7 +11,7 @@ using System.Windows.Forms;
 
 namespace OpenRAModEditor
 {
-	public partial class frmSettingExternalApplicationAddEdit : Form
+	public partial class frmSettingExternalApplicationAddEdit : Form, ILocalization
 	{
 		private SettingExternalApplication externalApplication;
 
@@ -43,7 +44,7 @@ namespace OpenRAModEditor
 			InitLanguageOptions();
 		}
 
-		private void InitLanguageOptions()
+		public void InitLanguageOptions()
 		{
 			lbExtension.Text = LanguageManager.Instance.GetLocalizedString("ui_setting_external_app_add_window_extension");
 			lbAppPath.Text = LanguageManager.Instance.GetLocalizedString("ui_setting_external_app_add_window_Path");

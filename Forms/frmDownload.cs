@@ -1,4 +1,5 @@
-﻿using System;
+﻿using OpenRAModEditor.Interfaces;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -10,7 +11,7 @@ using System.Windows.Forms;
 
 namespace OpenRAModEditor
 {
-	public partial class frmDownload : Form
+	public partial class frmDownload : Form, ILocalization
 	{
 		private DownloadTask downloadTask;
 		public event Action<string> afterDownload;
@@ -38,7 +39,7 @@ namespace OpenRAModEditor
 			InitLanguageOptions();
 		}
 
-		private void InitLanguageOptions()
+		public void InitLanguageOptions()
 		{
 			Text = LanguageManager.Instance.GetLocalizedString("ui_downloading_window_title");
 			lbTotalProgress.Text = LanguageManager.Instance.GetLocalizedString("ui_downloading_total_progress");

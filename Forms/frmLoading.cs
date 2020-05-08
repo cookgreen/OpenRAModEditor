@@ -1,4 +1,5 @@
-﻿using System;
+﻿using OpenRAModEditor.Interfaces;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -10,7 +11,7 @@ using System.Windows.Forms;
 
 namespace OpenRAModEditor
 {
-	public partial class frmLoading : Form
+	public partial class frmLoading : Form, ILocalization
 	{
 		public frmLoading()
 		{
@@ -22,7 +23,7 @@ namespace OpenRAModEditor
 			lbLoadingText.Location = new Point(newX, lbLoadingText.Location.Y);
 		}
 
-		private void InitLanguageOptions()
+		public void InitLanguageOptions()
 		{
 			lbLoadingText.Text = LanguageManager.Instance.GetLocalizedString("ui_loading_text");
 		}

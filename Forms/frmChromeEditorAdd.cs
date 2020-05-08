@@ -1,4 +1,5 @@
-﻿using System;
+﻿using OpenRAModEditor.Interfaces;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -10,7 +11,7 @@ using System.Windows.Forms;
 
 namespace OpenRAModEditor
 {
-	public partial class frmChromeEditorAdd : Form
+	public partial class frmChromeEditorAdd : Form, ILocalization
 	{
 		private OraMod oraMod;
 		private MiniYaml chromeYaml;
@@ -25,7 +26,7 @@ namespace OpenRAModEditor
 			InitLanguageOptions();
 		}
 
-		private void InitLanguageOptions()
+		public void InitLanguageOptions()
 		{
 			lbChromeName.Text = LanguageManager.Instance.GetLocalizedString("ui_chrome_editor_add_chrome_name");
 			lbChromeResource.Text = LanguageManager.Instance.GetLocalizedString("ui_chrome_editor_add_chrome_resource");

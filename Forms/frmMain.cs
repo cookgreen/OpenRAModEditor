@@ -1,7 +1,9 @@
-﻿using System;
+﻿using OpenRAModEditor.Utility;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics;
 using System.Drawing;
 using System.IO;
 using System.Linq;
@@ -210,12 +212,34 @@ namespace OpenRAModEditor
 
 		private void MnuOpenRAWiki_Click(object sender, EventArgs e)
 		{
-
+			string browserApp = Helper.GetSystemDefaultBrowser();
+			try
+			{
+				Process process = new Process();
+				process.StartInfo.FileName = browserApp;
+				process.StartInfo.Arguments = "https://github.com/OpenRA/OpenRA/wiki";
+				process.Start();
+			}
+			catch (Exception ex)
+			{
+				MessageBox.Show(ex.Message, LanguageManager.Instance.GetLocalizedString("str_error"), MessageBoxButtons.OK, MessageBoxIcon.Error);
+			}
 		}
 
 		private void MnuOpenRATraitWiki_Click(object sender, EventArgs e)
 		{
-
+			string browserApp = Helper.GetSystemDefaultBrowser();
+			try
+			{
+				Process process = new Process();
+				process.StartInfo.FileName = browserApp;
+				process.StartInfo.Arguments = "https://docs.openra.net/en/latest/";
+				process.Start();
+			}
+			catch (Exception ex)
+			{
+				MessageBox.Show(ex.Message, LanguageManager.Instance.GetLocalizedString("str_error"), MessageBoxButtons.OK, MessageBoxIcon.Error);
+			}
 		}
 
 		private void MnuAbout_Click(object sender, EventArgs e)

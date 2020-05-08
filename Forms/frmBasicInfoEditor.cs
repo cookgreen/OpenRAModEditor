@@ -1,4 +1,5 @@
-﻿using System;
+﻿using OpenRAModEditor.Interfaces;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -10,7 +11,7 @@ using System.Windows.Forms;
 
 namespace OpenRAModEditor
 {
-	public partial class frmBasicInfoEditor : Form
+	public partial class frmBasicInfoEditor : Form, ILocalization
 	{
 		private OraMod mod;
 		public frmBasicInfoEditor(OraMod mod)
@@ -27,7 +28,7 @@ namespace OpenRAModEditor
 			InitLanguageOptions();
 		}
 
-		private void InitLanguageOptions()
+		public void InitLanguageOptions()
 		{
 			lbModID.Text = LanguageManager.Instance.GetLocalizedString("ui_mod_basic_info_editor_mod_id");
 			lbEngineVersion.Text = LanguageManager.Instance.GetLocalizedString("ui_mod_basic_info_editor_engine_version");

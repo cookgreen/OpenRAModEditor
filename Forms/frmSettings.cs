@@ -1,4 +1,5 @@
-﻿using System;
+﻿using OpenRAModEditor.Interfaces;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -10,7 +11,7 @@ using System.Windows.Forms;
 
 namespace OpenRAModEditor
 {
-	public partial class frmSettings : Form
+	public partial class frmSettings : Form, ILocalization
 	{
 		private OraModEditorProject project;
 		private Dictionary<string, UserControl> settingControlDic;
@@ -48,6 +49,10 @@ namespace OpenRAModEditor
 		private void BtnCancel_Click(object sender, EventArgs e)
 		{
 			Close();
+		}
+
+		public void InitLanguageOptions()
+		{
 		}
 	}
 }

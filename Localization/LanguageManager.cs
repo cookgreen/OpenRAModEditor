@@ -12,6 +12,7 @@ namespace OpenRAModEditor
 		private const string LANGUAGE_DIR = "languages";
 		private Dictionary<string, List<MiniYaml>> locateFiles;
 		private Dictionary<string, string> translationDic;
+		private Dictionary<string, Dictionary<string, string>> cachedLocalzationStrings;
 		private static LanguageManager instance;
 		public static LanguageManager Instance
 		{
@@ -43,6 +44,31 @@ namespace OpenRAModEditor
 				{
 					locateFiles.Add(folder.Name, new List<MiniYaml>());
 					locateFiles[folder.Name].Add(new MiniYaml(locateFile.First().FullName));
+				}
+			}
+
+			cacheLocalzationStrings();
+		}
+
+		private void cacheLocalzationStrings()
+		{
+			cachedLocalzationStrings = new Dictionary<string, Dictionary<string, string>>();
+			foreach (var kpl in locateFiles)
+			{
+				if(!cachedLocalzationStrings.ContainsKey(kpl.Key))
+				{
+					cachedLocalzationStrings.Add(kpl.Key, new Dictionary<string, string>());
+				}
+				foreach (var kpl2 in kpl.Value)
+				{
+					var childrenNodes = kpl2.Nodes[0].ChildNodes[0].ChildNodes;
+					foreach (var node in childrenNodes)
+					{
+						if(!cachedLocalzationStrings[kpl.Key].ContainsKey(node.Name))
+						{
+							cachedLocalzationStrings[kpl.Key].Add(node.Name, node.Value);
+						}
+					}
 				}
 			}
 		}
@@ -87,6 +113,16 @@ namespace OpenRAModEditor
 				}
 			}
 			return "!{No suck key}";
+		}
+
+		public void GenerateNewLanguageTemplate(string destLangID, string destLangDescription, string srcLangID, string outputFilePath)
+		{
+			if (translationDic.ContainsKey(srcLangID) && destLangID != srcLangID)
+			{
+				MiniYaml miniYaml = new MiniYaml(outputFilePath);
+				
+				miniYaml.Save();
+			}
 		}
 	}
 }
