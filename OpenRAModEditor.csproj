@@ -56,206 +56,207 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AppConfig.cs" />
-    <Compile Include="frmChromeEditorAddSub.cs">
+    <Compile Include="Forms\frmChromeEditorAddSub.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmChromeEditorAddSub.Designer.cs">
+    <Compile Include="Forms\frmChromeEditorAddSub.Designer.cs">
       <DependentUpon>frmChromeEditorAddSub.cs</DependentUpon>
     </Compile>
-    <Compile Include="ctrlChromeEditor.cs">
+    <Compile Include="Controls\ctrlChromeEditor.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="ctrlChromeEditor.Designer.cs">
+    <Compile Include="Controls\ctrlChromeEditor.Designer.cs">
       <DependentUpon>ctrlChromeEditor.cs</DependentUpon>
     </Compile>
-    <Compile Include="ctrlModYamlEditor.cs">
+    <Compile Include="Controls\ctrlModYamlEditor.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="ctrlModYamlEditor.Designer.cs">
+    <Compile Include="Controls\ctrlModYamlEditor.Designer.cs">
       <DependentUpon>ctrlModYamlEditor.cs</DependentUpon>
     </Compile>
-    <Compile Include="ctrlSettingExternalApplication.cs">
+    <Compile Include="Controls\ctrlSettingExternalApplication.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="ctrlSettingExternalApplication.Designer.cs">
+    <Compile Include="Controls\ctrlSettingExternalApplication.Designer.cs">
       <DependentUpon>ctrlSettingExternalApplication.cs</DependentUpon>
     </Compile>
-    <Compile Include="ctrlTraitDetails.cs">
+    <Compile Include="Controls\ctrlTraitDetails.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="ctrlTraitDetails.Designer.cs">
+    <Compile Include="Controls\ctrlTraitDetails.Designer.cs">
       <DependentUpon>ctrlTraitDetails.cs</DependentUpon>
     </Compile>
-    <Compile Include="DownloadManager.cs" />
-    <Compile Include="DownloadTask.cs" />
-    <Compile Include="frmAddEditYamlNode.cs">
+    <Compile Include="Download\DownloadManager.cs" />
+    <Compile Include="Download\DownloadTask.cs" />
+    <Compile Include="Forms\frmAddEditYamlNode.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmAddEditYamlNode.Designer.cs">
+    <Compile Include="Forms\frmAddEditYamlNode.Designer.cs">
       <DependentUpon>frmAddEditYamlNode.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmChromeEditorAdd.cs">
+    <Compile Include="Forms\frmChromeEditorAdd.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmChromeEditorAdd.Designer.cs">
+    <Compile Include="Forms\frmChromeEditorAdd.Designer.cs">
       <DependentUpon>frmChromeEditorAdd.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmCreateNewMod.cs">
+    <Compile Include="Forms\frmCreateNewMod.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmCreateNewMod.Designer.cs">
+    <Compile Include="Forms\frmCreateNewMod.Designer.cs">
       <DependentUpon>frmCreateNewMod.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmControlPanel.cs">
+    <Compile Include="Forms\frmControlPanel.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmControlPanel.Designer.cs">
+    <Compile Include="Forms\frmControlPanel.Designer.cs">
       <DependentUpon>frmControlPanel.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmDownload.cs">
+    <Compile Include="Forms\frmDownload.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmDownload.Designer.cs">
+    <Compile Include="Forms\frmDownload.Designer.cs">
       <DependentUpon>frmDownload.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmLoading.cs">
+    <Compile Include="Forms\frmLoading.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmLoading.Designer.cs">
+    <Compile Include="Forms\frmLoading.Designer.cs">
       <DependentUpon>frmLoading.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmMain.cs">
+    <Compile Include="Forms\frmMain.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmMain.Designer.cs">
+    <Compile Include="Forms\frmMain.Designer.cs">
       <DependentUpon>frmMain.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmBasicInfoEditor.cs">
+    <Compile Include="Forms\frmBasicInfoEditor.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmBasicInfoEditor.Designer.cs">
+    <Compile Include="Forms\frmBasicInfoEditor.Designer.cs">
       <DependentUpon>frmBasicInfoEditor.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmModResourceBrowser.cs">
+    <Compile Include="Forms\frmModResourceBrowser.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmModResourceBrowser.Designer.cs">
+    <Compile Include="Forms\frmModResourceBrowser.Designer.cs">
       <DependentUpon>frmModResourceBrowser.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmOpenMod.cs">
+    <Compile Include="Forms\frmOpenMod.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmOpenMod.Designer.cs">
+    <Compile Include="Forms\frmOpenMod.Designer.cs">
       <DependentUpon>frmOpenMod.cs</DependentUpon>
     </Compile>
-    <Compile Include="ctrlOutputMessage.cs">
+    <Compile Include="Controls\ctrlOutputMessage.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="ctrlOutputMessage.Designer.cs">
+    <Compile Include="Controls\ctrlOutputMessage.Designer.cs">
       <DependentUpon>ctrlOutputMessage.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmSettingExternalApplicationAddEdit.cs">
+    <Compile Include="Forms\frmSettingExternalApplicationAddEdit.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmSettingExternalApplicationAddEdit.Designer.cs">
+    <Compile Include="Forms\frmSettingExternalApplicationAddEdit.Designer.cs">
       <DependentUpon>frmSettingExternalApplicationAddEdit.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmSettings.cs">
+    <Compile Include="Forms\frmSettings.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmSettings.Designer.cs">
+    <Compile Include="Forms\frmSettings.Designer.cs">
       <DependentUpon>frmSettings.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmTraitBrowser.cs">
+    <Compile Include="Forms\frmTraitBrowser.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmTraitBrowser.Designer.cs">
+    <Compile Include="Forms\frmTraitBrowser.Designer.cs">
       <DependentUpon>frmTraitBrowser.cs</DependentUpon>
     </Compile>
-    <Compile Include="ctrlVisualYamlEditor.cs">
+    <Compile Include="Controls\ctrlVisualYamlEditor.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="ctrlVisualYamlEditor.Designer.cs">
+    <Compile Include="Controls\ctrlVisualYamlEditor.Designer.cs">
       <DependentUpon>ctrlVisualYamlEditor.cs</DependentUpon>
     </Compile>
-    <Compile Include="GithubAPI.cs" />
-    <Compile Include="Helper.cs" />
-    <Compile Include="ICloseableForm.cs" />
-    <Compile Include="INotifyRunStateChanged.cs" />
-    <Compile Include="ISavableControl.cs" />
-    <Compile Include="LanguageManager.cs" />
-    <Compile Include="MiniYaml.cs" />
-    <Compile Include="MiniYamlNode.cs" />
-    <Compile Include="ModConfig.cs" />
-    <Compile Include="ModConfigEditor.cs" />
-    <Compile Include="OraMod.cs" />
-    <Compile Include="OraModEditorProject.cs" />
-    <Compile Include="OraModManifest.cs" />
-    <Compile Include="OraModRuntime.cs" />
-    <Compile Include="Outputer.cs" />
-    <Compile Include="OutputerCompile.cs" />
-    <Compile Include="OutputerRun.cs" />
-    <Compile Include="OutputManager.cs" />
-    <Compile Include="Program.cs" />
+    <Compile Include="API\GithubAPI.cs" />
+    <Compile Include="ORA\OraSDK.cs" />
+    <Compile Include="Utility\Helper.cs" />
+    <Compile Include="Interfaces\ICloseableForm.cs" />
+    <Compile Include="Interfaces\INotifyRunStateChanged.cs" />
+    <Compile Include="Interfaces\ISavableControl.cs" />
+    <Compile Include="Localization\LanguageManager.cs" />
+    <Compile Include="FileFormats\MiniYaml.cs" />
+    <Compile Include="FileFormats\MiniYamlNode.cs" />
+    <Compile Include="Config\ModConfig.cs" />
+    <Compile Include="Config\ModConfigEditor.cs" />
+    <Compile Include="ORA\OraMod.cs" />
+    <Compile Include="ORA\OraModEditorProject.cs" />
+    <Compile Include="ORA\OraModManifest.cs" />
+    <Compile Include="ORA\OraModRuntime.cs" />
+    <Compile Include="Output\Outputer.cs" />
+    <Compile Include="Output\OutputerCompile.cs" />
+    <Compile Include="Output\OutputerRun.cs" />
+    <Compile Include="Output\OutputManager.cs" />
+    <Compile Include="Support\Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="ctrlChromeEditor.resx">
+    <EmbeddedResource Include="Controls\ctrlChromeEditor.resx">
       <DependentUpon>ctrlChromeEditor.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ctrlModYamlEditor.resx">
+    <EmbeddedResource Include="Controls\ctrlModYamlEditor.resx">
       <DependentUpon>ctrlModYamlEditor.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ctrlOutputMessage.resx">
+    <EmbeddedResource Include="Controls\ctrlOutputMessage.resx">
       <DependentUpon>ctrlOutputMessage.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ctrlSettingExternalApplication.resx">
+    <EmbeddedResource Include="Controls\ctrlSettingExternalApplication.resx">
       <DependentUpon>ctrlSettingExternalApplication.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ctrlTraitDetails.resx">
+    <EmbeddedResource Include="Controls\ctrlTraitDetails.resx">
       <DependentUpon>ctrlTraitDetails.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ctrlVisualYamlEditor.resx">
+    <EmbeddedResource Include="Controls\ctrlVisualYamlEditor.resx">
       <DependentUpon>ctrlVisualYamlEditor.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmAddEditYamlNode.resx">
+    <EmbeddedResource Include="Forms\frmAddEditYamlNode.resx">
       <DependentUpon>frmAddEditYamlNode.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmChromeEditorAdd.resx">
+    <EmbeddedResource Include="Forms\frmChromeEditorAdd.resx">
       <DependentUpon>frmChromeEditorAdd.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmChromeEditorAddSub.resx">
+    <EmbeddedResource Include="Forms\frmChromeEditorAddSub.resx">
       <DependentUpon>frmChromeEditorAddSub.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmCreateNewMod.resx">
+    <EmbeddedResource Include="Forms\frmCreateNewMod.resx">
       <DependentUpon>frmCreateNewMod.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmControlPanel.resx">
+    <EmbeddedResource Include="Forms\frmControlPanel.resx">
       <DependentUpon>frmControlPanel.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmDownload.resx">
+    <EmbeddedResource Include="Forms\frmDownload.resx">
       <DependentUpon>frmDownload.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmLoading.resx">
+    <EmbeddedResource Include="Forms\frmLoading.resx">
       <DependentUpon>frmLoading.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmMain.resx">
+    <EmbeddedResource Include="Forms\frmMain.resx">
       <DependentUpon>frmMain.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmBasicInfoEditor.resx">
+    <EmbeddedResource Include="Forms\frmBasicInfoEditor.resx">
       <DependentUpon>frmBasicInfoEditor.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmModResourceBrowser.resx">
+    <EmbeddedResource Include="Forms\frmModResourceBrowser.resx">
       <DependentUpon>frmModResourceBrowser.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmOpenMod.resx">
+    <EmbeddedResource Include="Forms\frmOpenMod.resx">
       <DependentUpon>frmOpenMod.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmSettingExternalApplicationAddEdit.resx">
+    <EmbeddedResource Include="Forms\frmSettingExternalApplicationAddEdit.resx">
       <DependentUpon>frmSettingExternalApplicationAddEdit.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmSettings.resx">
+    <EmbeddedResource Include="Forms\frmSettings.resx">
       <DependentUpon>frmSettings.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmTraitBrowser.resx">
+    <EmbeddedResource Include="Forms\frmTraitBrowser.resx">
       <DependentUpon>frmTraitBrowser.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -298,5 +299,6 @@
     <Content Include="images\run.png" />
     <Content Include="images\save.png" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
