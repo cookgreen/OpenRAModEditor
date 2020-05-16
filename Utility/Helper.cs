@@ -28,7 +28,7 @@ namespace OpenRAModEditor.Utility
                     name = name.Substring(0, name.LastIndexOf(".exe") + 4);
 
             }
-            catch (Exception ex)
+            catch
             {
             }
             finally

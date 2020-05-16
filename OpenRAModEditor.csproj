@@ -172,6 +172,12 @@
     <Compile Include="Forms\frmSettings.Designer.cs">
       <DependentUpon>frmSettings.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\frmSingleValueEditor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmSingleValueEditor.Designer.cs">
+      <DependentUpon>frmSingleValueEditor.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\frmTraitBrowser.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -186,6 +192,7 @@
     </Compile>
     <Compile Include="API\GithubAPI.cs" />
     <Compile Include="Interfaces\ILocalization.cs" />
+    <Compile Include="ORA\OraModTrait.cs" />
     <Compile Include="ORA\OraSDK.cs" />
     <Compile Include="Utility\Expandition.cs" />
     <Compile Include="Interfaces\ICloseableForm.cs" />
@@ -266,6 +273,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\frmSettings.resx">
       <DependentUpon>frmSettings.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmSingleValueEditor.resx">
+      <DependentUpon>frmSingleValueEditor.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\frmTraitBrowser.resx">
       <DependentUpon>frmTraitBrowser.cs</DependentUpon>
